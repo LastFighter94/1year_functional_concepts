@@ -1,0 +1,57 @@
+2022-12-23 20:06:10.542 | ERROR    | single_use.logme:logIt:53 - You can't write in this chat (caused by SendMessageRequest)
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.2272591805046889, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '52385d2b-8874-4650-8168-8...
+                 │                  └ {'call': 1.2272591805046889, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '52385d2b-8874-4650-8168-8...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000183493F2290>, 'js_from_py': <function js_from_py at 0x000001834AE0DB40>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 22, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'examples', 'log_id': '52385d2b-8874-4650-8168-86b1fccef728_examples', 'accounts_list': ['6282195793827', '62821957...
+    └ <function controller at 0x00000183493F23B0>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 12, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'examples', 'log_id': '52385d2b-8874-4650-8168-86b1fccef728_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           │   └ {'stuff': 'examples', 'log_id': '52385d2b-8874-4650-8168-86b1fccef728_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'examples': <function examples at 0x00000183493F2320>, 'autocomments': <function autocomments at 0x00000183493F29E0>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 81, in examples
+    client.loop.run_until_complete(main())
+    │      │                       └ <function examples.<locals>.main at 0x000001834AFC4EE0>
+    │      └ <property object at 0x000001834AD36B60>
+    └ <telethon.client.telegramclient.TelegramClient object at 0x000001834AF8ED70>
+
+  File "C:\Users\kishko_yuri\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-10' coro=<examples.<locals>.main() done, defined at C:\Users\kishko_yuri\Desktop\tg_prime_learn\uni...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 43, in main
+    await client.send_message(entity='@yka94test', message=msg)
+          │      │                                         └ 'hello epta'
+          │      └ <function MessageMethods.send_message at 0x000001834ADE9480>
+          └ <telethon.client.telegramclient.TelegramClient object at 0x000001834AF8ED70>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\tg_prime_learn\lib\site-packages\telethon\client\messages.py", line 889, in send_message
+    result = await self(request)
+                   │    └ <telethon.tl.functions.messages.SendMessageRequest object at 0x000001834B05F9D0>
+                   └ <telethon.client.telegramclient.TelegramClient object at 0x000001834AF8ED70>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\tg_prime_learn\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+                 │    │     │    │        │                └ False
+                 │    │     │    │        └ <telethon.tl.functions.messages.SendMessageRequest object at 0x000001834B05F9D0>
+                 │    │     │    └ <telethon.network.mtprotosender.MTProtoSender object at 0x000001834B013D30>
+                 │    │     └ <telethon.client.telegramclient.TelegramClient object at 0x000001834AF8ED70>
+                 │    └ <function UserMethods._call at 0x000001834ADC2C20>
+                 └ <telethon.client.telegramclient.TelegramClient object at 0x000001834AF8ED70>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\tg_prime_learn\lib\site-packages\telethon\client\users.py", line 84, in _call
+    result = await future
+                   └ <Future finished exception=ChatWriteForbiddenError("You can't write in this chat (caused by SendMessageRequest)")>
+
+telethon.errors.rpcerrorlist.ChatWriteForbiddenError: You can't write in this chat (caused by SendMessageRequest)

@@ -1,0 +1,17 @@
+python -m venv tg_prime_learn
+tg_prime_learn\Scripts\activate.bat
+
+pip install ipython
+python -m pip install --upgrade pip
+
+pip install gevent
+pip install bottle
+pip install bottle_websocket
+pip install whichcraft
+pip install loguru
+pip install pygelf
+pip install jinja2
+pip install ujson
+pip install Telethon
+pip install asyncio
+pip install pysocks

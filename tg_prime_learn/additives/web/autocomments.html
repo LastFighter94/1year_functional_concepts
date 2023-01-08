@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Авто комментарии</p>
+
+<input type="text" placeholder="Message Text" id="message_text"></input>
+
+<p>
+    <button id="send_message">Send Message</button>
+</p>
+{% endblock %}
+
+{% block js %}
+<script src="js_pages/autocomments.js"></script>
+{% endblock %}

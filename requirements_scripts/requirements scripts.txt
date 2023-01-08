@@ -1,0 +1,59 @@
+### ### ### 1
+# при запуске программы можно получить словарь установленных в данный момент пакетов по факту (в виртуальном окружении) - если вдруг
+# информация в requirements не соответствует тому что есть на самом деле (при этом не затрагивая файл requirements)
+# код внизу
+
+import subprocess
+import json
+
+data = subprocess.check_output(["pip", "list", "--format", "json"])
+parsed_results = json.loads(data)
+
+packages_dict = {}
+
+list_of_tuples_packages = [(element["name"], element["version"]) for element in parsed_results]
+
+for el, ver in list_of_tuples_packages:
+    packages_dict[el] = ver
+
+
+### ### ### 2
+# при запуске команды в виртуальном окружении можно получить файл.txt со списком установленных пакетов
+# pip freeze > requirements.txt
+
+
+### ### ### 3
+# при запуске программы можно получить словарь установленных в данный момент пакетов из файла requirements.txt
+# если они расположены каждый с новой строки в виде имя_пакета==4.9.2, как в requirements_example.txt
+# код внизу
+
+def get_pks_dict(req_file_name):
+    packages_dict = {}
+    with open(req_file_name, 'r') as f:
+        packages_list_unfiltered = f.read().split('\n')
+
+    # если вдруг в req_file_name остались расстояние между строк предусмотрена фильтрация
+    packages_list = list(filter(lambda pkg: pkg != '', packages_list_unfiltered))
+    # можно добавить strip чтобы убрать пробелы, но это уже лишнее мне кажется
+
+    for i in range(len(packages_list)):
+        key, value = tuple(packages_list[i].split('=='))
+        packages_dict[key] = value
+
+    return packages_dict
+
+requirements_dict_1 = get_pks_dict('requirements.txt')
+requirements_dict_2 = get_pks_dict('requirements2.txt')
+
+# допустим у нас есть два словаря packages_dict и нам надо их каким-то образом объединить:
+# в таком случае при пересечении пакетов нам нужно будет либо обновить версии, либо оставить как есть
+
+from collections import ChainMap
+
+def update_req_dict(main_req_dict, additional_req_dict):
+    # при одинаковых ключах будет считано value main_req_dict
+    chained_dict = ChainMap(main_req_dict, additional_req_dict)
+    for key in chained_dict:
+        print(f'{key}=={chained_dict[key]}')
+
+update_req_dict(requirements_dict_1, requirements_dict_2)

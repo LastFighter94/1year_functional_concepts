@@ -1,0 +1,679 @@
+2022-12-22 09:24:07.726 | ERROR    | single_use.logme:logIt:53 - name 'dataController' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.2112933264043988, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_...
+                 │                  └ {'call': 1.2112933264043988, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_...
+                 └ {'hello_from_py': <function hello_from_py at 0x000002105D0EE200>, 'js_from_py': <function js_from_py at 0x000002105D0EE050>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    dataController(myArgs)
+                   └ {'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id': '3bbbf69d-7793-4c65-86e2-6cd3255f323c_autocomments', 'accounts...
+
+NameError: name 'dataController' is not defined
+2022-12-22 09:24:11.654 | ERROR    | single_use.logme:logIt:53 - name 'dataController' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.2446237721718127, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_...
+                 │                  └ {'call': 1.2446237721718127, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_...
+                 └ {'hello_from_py': <function hello_from_py at 0x000002105D0EE200>, 'js_from_py': <function js_from_py at 0x000002105D0EE050>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    dataController(myArgs)
+                   └ {'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id': '7a4638aa-01d4-4355-82e4-054c08274373_autocomments', 'accounts...
+
+NameError: name 'dataController' is not defined
+2022-12-22 09:27:39.374 | ERROR    | single_use.logme:logIt:53 - name 'dataController' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.1658252705751893, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_...
+                 │                  └ {'call': 1.1658252705751893, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_...
+                 └ {'hello_from_py': <function hello_from_py at 0x000001AB88C0E170>, 'js_from_py': <function js_from_py at 0x000001AB88C0DFC0>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    dataController(myArgs)
+                   └ {'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id': 'a0993a74-7ff2-445d-9ef0-715538d40f37_autocomments', 'accounts...
+
+NameError: name 'dataController' is not defined
+2022-12-22 09:29:10.238 | ERROR    | single_use.logme:logIt:53 - name 'controller' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.4795664352536, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id'...
+                 │                  └ {'call': 1.4795664352536, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id'...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000213BA47E170>, 'js_from_py': <function js_from_py at 0x00000213BA47DFC0>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    controller(myArgs)
+               └ {'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id': '2b853804-2d99-423e-bc2b-676ecaa1735d_autocomments', 'accounts...
+
+NameError: name 'controller' is not defined
+2022-12-22 09:29:18.302 | ERROR    | single_use.logme:logIt:53 - name 'controller' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 2.9188159383657943, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_...
+                 │                  └ {'call': 2.9188159383657943, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000213BA47E170>, 'js_from_py': <function js_from_py at 0x00000213BA47DFC0>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    controller(myArgs)
+               └ {'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id': '2b853804-2d99-423e-bc2b-676ecaa1735d_autocomments', 'accounts...
+
+NameError: name 'controller' is not defined
+2022-12-22 09:29:18.669 | ERROR    | single_use.logme:logIt:53 - name 'controller' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 3.1048907689565723, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_...
+                 │                  └ {'call': 3.1048907689565723, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000213BA47E170>, 'js_from_py': <function js_from_py at 0x00000213BA47DFC0>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    controller(myArgs)
+               └ {'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id': '2b853804-2d99-423e-bc2b-676ecaa1735d_autocomments', 'accounts...
+
+NameError: name 'controller' is not defined
+2022-12-22 09:29:18.861 | ERROR    | single_use.logme:logIt:53 - name 'controller' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 4.105537881567935, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_i...
+                 │                  └ {'call': 4.105537881567935, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_i...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000213BA47E170>, 'js_from_py': <function js_from_py at 0x00000213BA47DFC0>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    controller(myArgs)
+               └ {'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id': '2b853804-2d99-423e-bc2b-676ecaa1735d_autocomments', 'accounts...
+
+NameError: name 'controller' is not defined
+2022-12-22 09:29:19.046 | ERROR    | single_use.logme:logIt:53 - name 'controller' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 5.05674982785729, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id...
+                 │                  └ {'call': 5.05674982785729, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000213BA47E170>, 'js_from_py': <function js_from_py at 0x00000213BA47DFC0>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    controller(myArgs)
+               └ {'stuff': 'auto_comments', 'action': 'auto_comment', 'log_id': '2b853804-2d99-423e-bc2b-676ecaa1735d_autocomments', 'accounts...
+
+NameError: name 'controller' is not defined
+2022-12-22 10:23:49.084 | ERROR    | single_use.logme:logIt:53 - name 'get_session' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.3257187420119625, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 │                  └ {'call': 1.3257187420119625, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 └ {'hello_from_py': <function hello_from_py at 0x000001C9C374E170>, 'js_from_py': <function js_from_py at 0x000001C9C374E440>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 20, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '483163ed-6a2d-4edd-b152-3ac78aac3583_autocomments', 'account...
+    └ <function controller at 0x000001C9C374E290>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '483163ed-6a2d-4edd-b152-3ac78aac3583_autocomments', 'account...
+           │           │   └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '483163ed-6a2d-4edd-b152-3ac78aac3583_autocomments', 'account...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'auto_comments': <function auto_comments at 0x000001C9C374E200>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\auto_comments_controller.py", line 4, in auto_comments
+    accountInfo = get_session(accounts_list[0])
+                              └ ['6282195793827', '6282195793830', '6282195793837']
+
+NameError: name 'get_session' is not defined
+2022-12-22 10:31:41.148 | ERROR    | single_use.logme:logIt:53 - name 'dataController' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.1525043356628029, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 │                  └ {'call': 1.1525043356628029, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000196BA5DE200>, 'js_from_py': <function js_from_py at 0x00000196BA5DE050>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    dataController(myArgs)
+                   └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '5b8700fd-a80a-4ce0-b2da-5445e3d8019e_autocomments', 'account...
+
+NameError: name 'dataController' is not defined
+2022-12-22 10:31:42.731 | ERROR    | single_use.logme:logIt:53 - name 'dataController' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 2.8226740793559593, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 │                  └ {'call': 2.8226740793559593, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000196BA5DE200>, 'js_from_py': <function js_from_py at 0x00000196BA5DE050>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    dataController(myArgs)
+                   └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '5b8700fd-a80a-4ce0-b2da-5445e3d8019e_autocomments', 'account...
+
+NameError: name 'dataController' is not defined
+2022-12-22 10:31:43.011 | ERROR    | single_use.logme:logIt:53 - name 'dataController' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 3.238561604409199, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log_...
+                 │                  └ {'call': 3.238561604409199, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log_...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000196BA5DE200>, 'js_from_py': <function js_from_py at 0x00000196BA5DE050>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    dataController(myArgs)
+                   └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '5b8700fd-a80a-4ce0-b2da-5445e3d8019e_autocomments', 'account...
+
+NameError: name 'dataController' is not defined
+2022-12-22 10:31:43.187 | ERROR    | single_use.logme:logIt:53 - name 'dataController' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 4.355211103989756, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log_...
+                 │                  └ {'call': 4.355211103989756, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log_...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000196BA5DE200>, 'js_from_py': <function js_from_py at 0x00000196BA5DE050>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    dataController(myArgs)
+                   └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '5b8700fd-a80a-4ce0-b2da-5445e3d8019e_autocomments', 'account...
+
+NameError: name 'dataController' is not defined
+2022-12-22 10:31:43.332 | ERROR    | single_use.logme:logIt:53 - name 'dataController' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 5.468990340804688, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log_...
+                 │                  └ {'call': 5.468990340804688, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log_...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000196BA5DE200>, 'js_from_py': <function js_from_py at 0x00000196BA5DE050>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    dataController(myArgs)
+                   └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '5b8700fd-a80a-4ce0-b2da-5445e3d8019e_autocomments', 'account...
+
+NameError: name 'dataController' is not defined
+2022-12-22 10:32:35.420 | ERROR    | single_use.logme:logIt:53 - name 'get_session' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.2829010876554934, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 │                  └ {'call': 1.2829010876554934, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 └ {'hello_from_py': <function hello_from_py at 0x0000023E700BE170>, 'js_from_py': <function js_from_py at 0x0000023E700BE290>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': 'bbfd4665-62a0-483e-8a2d-33909b0fb70f_autocomments', 'account...
+    └ <function controller at 0x0000023E700BE320>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': 'bbfd4665-62a0-483e-8a2d-33909b0fb70f_autocomments', 'account...
+           │           │   └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': 'bbfd4665-62a0-483e-8a2d-33909b0fb70f_autocomments', 'account...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'auto_comments': <function auto_comments at 0x0000023E700BE3B0>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\auto_comments_controller.py", line 7, in auto_comments
+    accountInfo = get_session(accounts_list[0])
+                              └ ['6282195793827', '6282195793830', '6282195793837']
+
+NameError: name 'get_session' is not defined
+2022-12-22 10:32:37.020 | ERROR    | single_use.logme:logIt:53 - name 'get_session' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 2.2016531854278094, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 │                  └ {'call': 2.2016531854278094, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 └ {'hello_from_py': <function hello_from_py at 0x0000023E700BE170>, 'js_from_py': <function js_from_py at 0x0000023E700BE290>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 19, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': 'bbfd4665-62a0-483e-8a2d-33909b0fb70f_autocomments', 'account...
+    └ <function controller at 0x0000023E700BE320>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': 'bbfd4665-62a0-483e-8a2d-33909b0fb70f_autocomments', 'account...
+           │           │   └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': 'bbfd4665-62a0-483e-8a2d-33909b0fb70f_autocomments', 'account...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'auto_comments': <function auto_comments at 0x0000023E700BE3B0>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\auto_comments_controller.py", line 7, in auto_comments
+    accountInfo = get_session(accounts_list[0])
+                              └ ['6282195793827', '6282195793830', '6282195793837']
+
+NameError: name 'get_session' is not defined
+2022-12-22 10:42:54.115 | ERROR    | single_use.logme:logIt:53 - name 'get_session' is not defined
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.9791765246861142, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 │                  └ {'call': 1.9791765246861142, 'name': 'SendMessageServer', 'args': [{'stuff': 'auto_comments', 'action': 'auto_comments', 'log...
+                 └ {'hello_from_py': <function hello_from_py at 0x0000022873ADE0E0>, 'js_from_py': <function js_from_py at 0x0000022873ADE170>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 20, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '894322a1-e984-4670-b96e-6e01c8ecbddf_autocomments', 'account...
+    └ <function controller at 0x0000022873ADE200>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '894322a1-e984-4670-b96e-6e01c8ecbddf_autocomments', 'account...
+           │           │   └ {'stuff': 'auto_comments', 'action': 'auto_comments', 'log_id': '894322a1-e984-4670-b96e-6e01c8ecbddf_autocomments', 'account...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'auto_comments': <function auto_comments at 0x0000022873ADE290>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\auto_comments_controller.py", line 4, in auto_comments
+    accountInfo = get_session(accounts_list[0])
+                              └ ['6282195793827', '6282195793830', '6282195793837']
+
+NameError: name 'get_session' is not defined
+2022-12-22 11:16:39.612 | ERROR    | single_use.logme:logIt:53 - The message cannot be empty unless a file is provided
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.0096078495092657, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': 'e1408767-5754-4e3f-b379-2...
+                 │                  └ {'call': 1.0096078495092657, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': 'e1408767-5754-4e3f-b379-2...
+                 └ {'hello_from_py': <function hello_from_py at 0x00000289198FE0E0>, 'js_from_py': <function js_from_py at 0x00000289198FE8C0>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 22, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'examples', 'log_id': 'e1408767-5754-4e3f-b379-233e67877430_examples', 'accounts_list': ['6282195793827', '62821957...
+    └ <function controller at 0x00000289198FE200>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'examples', 'log_id': 'e1408767-5754-4e3f-b379-233e67877430_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           │   └ {'stuff': 'examples', 'log_id': 'e1408767-5754-4e3f-b379-233e67877430_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'examples': <function examples at 0x00000289198FE3B0>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 78, in examples
+    client.loop.run_until_complete(main())
+    │      │                       └ <function examples.<locals>.main at 0x000002891B5451B0>
+    │      └ <property object at 0x000002891B242BB0>
+    └ <telethon.client.telegramclient.TelegramClient object at 0x000002891B521C60>
+
+  File "C:\Users\kishko_yuri\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-10' coro=<examples.<locals>.main() done, defined at C:\Users\kishko_yuri\Desktop\tg_prime_learn\uni...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 55, in main
+    message = await client.send_message(
+                    │      └ <function MessageMethods.send_message at 0x000002891B2F1240>
+                    └ <telethon.client.telegramclient.TelegramClient object at 0x000002891B521C60>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\tg_prime_learn\lib\site-packages\telethon\client\messages.py", line 872, in send_message
+    raise ValueError(
+
+ValueError: The message cannot be empty unless a file is provided
+2022-12-22 11:19:15.708 | ERROR    | single_use.logme:logIt:53 - The message cannot be empty unless a file is provided
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.583514152908533, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '29d457c1-09db-4188-bfff-10...
+                 │                  └ {'call': 1.583514152908533, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '29d457c1-09db-4188-bfff-10...
+                 └ {'hello_from_py': <function hello_from_py at 0x000002ABF200E0E0>, 'js_from_py': <function js_from_py at 0x000002ABF200E8C0>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 22, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'examples', 'log_id': '29d457c1-09db-4188-bfff-10a9dd64066f_examples', 'accounts_list': ['6282195793827', '62821957...
+    └ <function controller at 0x000002ABF200E200>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'examples', 'log_id': '29d457c1-09db-4188-bfff-10a9dd64066f_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           │   └ {'stuff': 'examples', 'log_id': '29d457c1-09db-4188-bfff-10a9dd64066f_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'examples': <function examples at 0x000002ABF200E3B0>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 79, in examples
+    client.loop.run_until_complete(main())
+    │      │                       └ <function examples.<locals>.main at 0x000002ABF3BE4160>
+    │      └ <property object at 0x000002ABF3952B60>
+    └ <telethon.client.telegramclient.TelegramClient object at 0x000002ABF3BA2170>
+
+  File "C:\Users\kishko_yuri\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-10' coro=<examples.<locals>.main() done, defined at C:\Users\kishko_yuri\Desktop\tg_prime_learn\uni...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 49, in main
+    await client.send_message(entity='@yka94', message=msg)
+          │      │                                     └ ''
+          │      └ <function MessageMethods.send_message at 0x000002ABF3A01240>
+          └ <telethon.client.telegramclient.TelegramClient object at 0x000002ABF3BA2170>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\tg_prime_learn\lib\site-packages\telethon\client\messages.py", line 872, in send_message
+    raise ValueError(
+
+ValueError: The message cannot be empty unless a file is provided
+2022-12-22 11:20:21.011 | ERROR    | single_use.logme:logIt:53 - The message cannot be empty unless a file is provided
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.7720089516935273, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '8cdbd810-6fa1-440f-a9bb-0...
+                 │                  └ {'call': 1.7720089516935273, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '8cdbd810-6fa1-440f-a9bb-0...
+                 └ {'hello_from_py': <function hello_from_py at 0x0000020A08AAE0E0>, 'js_from_py': <function js_from_py at 0x0000020A08AAE830>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 22, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'examples', 'log_id': '8cdbd810-6fa1-440f-a9bb-00b2dca0bdd5_examples', 'accounts_list': ['6282195793827', '62821957...
+    └ <function controller at 0x0000020A08AAE200>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'examples', 'log_id': '8cdbd810-6fa1-440f-a9bb-00b2dca0bdd5_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           │   └ {'stuff': 'examples', 'log_id': '8cdbd810-6fa1-440f-a9bb-00b2dca0bdd5_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'examples': <function examples at 0x0000020A08AAE170>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 79, in examples
+    client.loop.run_until_complete(main())
+    │      │                       └ <function examples.<locals>.main at 0x0000020A0A680160>
+    │      └ <property object at 0x0000020A0A3F2AC0>
+    └ <telethon.client.telegramclient.TelegramClient object at 0x0000020A0A6421A0>
+
+  File "C:\Users\kishko_yuri\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-10' coro=<examples.<locals>.main() done, defined at C:\Users\kishko_yuri\Desktop\tg_prime_learn\uni...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 49, in main
+    await client.send_message(entity='@yka94', message=msg)
+          │      │                                     └ ''
+          │      └ <function MessageMethods.send_message at 0x0000020A0A4A12D0>
+          └ <telethon.client.telegramclient.TelegramClient object at 0x0000020A0A6421A0>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\tg_prime_learn\lib\site-packages\telethon\client\messages.py", line 872, in send_message
+    raise ValueError(
+
+ValueError: The message cannot be empty unless a file is provided
+2022-12-22 11:20:44.933 | ERROR    | single_use.logme:logIt:53 - The message cannot be empty unless a file is provided
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 2.749325734364981, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '8cdbd810-6fa1-440f-a9bb-00...
+                 │                  └ {'call': 2.749325734364981, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '8cdbd810-6fa1-440f-a9bb-00...
+                 └ {'hello_from_py': <function hello_from_py at 0x0000020A08AAE0E0>, 'js_from_py': <function js_from_py at 0x0000020A08AAE830>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 22, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'examples', 'log_id': '8cdbd810-6fa1-440f-a9bb-00b2dca0bdd5_examples', 'accounts_list': ['6282195793827', '62821957...
+    └ <function controller at 0x0000020A08AAE200>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'examples', 'log_id': '8cdbd810-6fa1-440f-a9bb-00b2dca0bdd5_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           │   └ {'stuff': 'examples', 'log_id': '8cdbd810-6fa1-440f-a9bb-00b2dca0bdd5_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'examples': <function examples at 0x0000020A08AAE170>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 79, in examples
+    client.loop.run_until_complete(main())
+    │      │                       └ <function examples.<locals>.main at 0x0000020A0A6F5630>
+    │      └ <property object at 0x0000020A0A3F2AC0>
+    └ <telethon.client.telegramclient.TelegramClient object at 0x0000020A0A70CB50>
+
+  File "C:\Users\kishko_yuri\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-23' coro=<examples.<locals>.main() done, defined at C:\Users\kishko_yuri\Desktop\tg_prime_learn\uni...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 49, in main
+    await client.send_message(entity='@yka94', message=msg)
+          │      │                                     └ ''
+          │      └ <function MessageMethods.send_message at 0x0000020A0A4A12D0>
+          └ <telethon.client.telegramclient.TelegramClient object at 0x0000020A0A70CB50>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\tg_prime_learn\lib\site-packages\telethon\client\messages.py", line 872, in send_message
+    raise ValueError(
+
+ValueError: The message cannot be empty unless a file is provided
+2022-12-22 11:22:44.663 | ERROR    | single_use.logme:logIt:53 - The message cannot be empty unless a file is provided
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 2.903536237332734, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '630f9fe9-c6c7-4e76-8e7d-e4...
+                 │                  └ {'call': 2.903536237332734, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '630f9fe9-c6c7-4e76-8e7d-e4...
+                 └ {'hello_from_py': <function hello_from_py at 0x0000020A08AAE0E0>, 'js_from_py': <function js_from_py at 0x0000020A08AAE830>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 22, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'examples', 'log_id': '630f9fe9-c6c7-4e76-8e7d-e4eb181d89b1_examples', 'accounts_list': ['6282195793827', '62821957...
+    └ <function controller at 0x0000020A08AAE200>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'examples', 'log_id': '630f9fe9-c6c7-4e76-8e7d-e4eb181d89b1_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           │   └ {'stuff': 'examples', 'log_id': '630f9fe9-c6c7-4e76-8e7d-e4eb181d89b1_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'examples': <function examples at 0x0000020A08AAE170>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 79, in examples
+    client.loop.run_until_complete(main())
+    │      │                       └ <function examples.<locals>.main at 0x0000020A0A6F7250>
+    │      └ <property object at 0x0000020A0A3F2AC0>
+    └ <telethon.client.telegramclient.TelegramClient object at 0x0000020A0A70C6A0>
+
+  File "C:\Users\kishko_yuri\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-51' coro=<examples.<locals>.main() done, defined at C:\Users\kishko_yuri\Desktop\tg_prime_learn\uni...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 49, in main
+    await client.send_message(entity='@yka94', message=msg)
+          │      │                                     └ ''
+          │      └ <function MessageMethods.send_message at 0x0000020A0A4A12D0>
+          └ <telethon.client.telegramclient.TelegramClient object at 0x0000020A0A70C6A0>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\tg_prime_learn\lib\site-packages\telethon\client\messages.py", line 872, in send_message
+    raise ValueError(
+
+ValueError: The message cannot be empty unless a file is provided
+2022-12-22 11:23:09.548 | ERROR    | single_use.logme:logIt:53 - The message cannot be empty unless a file is provided
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.8470525653078333, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '37b1f7c0-3cf6-48f8-ad47-8...
+                 │                  └ {'call': 1.8470525653078333, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '37b1f7c0-3cf6-48f8-ad47-8...
+                 └ {'hello_from_py': <function hello_from_py at 0x0000020A08AAE0E0>, 'js_from_py': <function js_from_py at 0x0000020A08AAE830>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 22, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'examples', 'log_id': '37b1f7c0-3cf6-48f8-ad47-85eb530cda48_examples', 'accounts_list': ['6282195793827', '62821957...
+    └ <function controller at 0x0000020A08AAE200>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'examples', 'log_id': '37b1f7c0-3cf6-48f8-ad47-85eb530cda48_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           │   └ {'stuff': 'examples', 'log_id': '37b1f7c0-3cf6-48f8-ad47-85eb530cda48_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'examples': <function examples at 0x0000020A08AAE170>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 79, in examples
+    client.loop.run_until_complete(main())
+    │      │                       └ <function examples.<locals>.main at 0x0000020A0720AE60>
+    │      └ <property object at 0x0000020A0A3F2AC0>
+    └ <telethon.client.telegramclient.TelegramClient object at 0x0000020A0A70E440>
+
+  File "C:\Users\kishko_yuri\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-64' coro=<examples.<locals>.main() done, defined at C:\Users\kishko_yuri\Desktop\tg_prime_learn\uni...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 49, in main
+    await client.send_message(entity='@yka94', message=msg)
+          │      │                                     └ ''
+          │      └ <function MessageMethods.send_message at 0x0000020A0A4A12D0>
+          └ <telethon.client.telegramclient.TelegramClient object at 0x0000020A0A70E440>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\tg_prime_learn\lib\site-packages\telethon\client\messages.py", line 872, in send_message
+    raise ValueError(
+
+ValueError: The message cannot be empty unless a file is provided
+2022-12-22 11:23:34.489 | ERROR    | single_use.logme:logIt:53 - The message cannot be empty unless a file is provided
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.325774772356257, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '93607abc-3b62-43a9-950f-ea...
+                 │                  └ {'call': 1.325774772356257, 'name': 'SendMessageServer', 'args': [{'stuff': 'examples', 'log_id': '93607abc-3b62-43a9-950f-ea...
+                 └ {'hello_from_py': <function hello_from_py at 0x0000020A08AAE0E0>, 'js_from_py': <function js_from_py at 0x0000020A08AAE830>, ...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\helpers\eel_functions.py", line 22, in SendMessageServer
+    dataController(myArgs)
+    │              └ {'stuff': 'examples', 'log_id': '93607abc-3b62-43a9-950f-ea4b8cf43c71_examples', 'accounts_list': ['6282195793827', '62821957...
+    └ <function controller at 0x0000020A08AAE200>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\__init__.py", line 10, in controller
+    return datacontext.get(data['stuff'])(data)
+           │           │   │              └ {'stuff': 'examples', 'log_id': '93607abc-3b62-43a9-950f-ea4b8cf43c71_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           │   └ {'stuff': 'examples', 'log_id': '93607abc-3b62-43a9-950f-ea4b8cf43c71_examples', 'accounts_list': ['6282195793827', '62821957...
+           │           └ <method 'get' of 'dict' objects>
+           └ {'examples': <function examples at 0x0000020A08AAE170>}
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 79, in examples
+    client.loop.run_until_complete(main())
+    │      │                       └ <function examples.<locals>.main at 0x0000020A0720B490>
+    │      └ <property object at 0x0000020A0A3F2AC0>
+    └ <telethon.client.telegramclient.TelegramClient object at 0x0000020A0A70E590>
+
+  File "C:\Users\kishko_yuri\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-77' coro=<examples.<locals>.main() done, defined at C:\Users\kishko_yuri\Desktop\tg_prime_learn\uni...
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\universal_controller\examples_controller.py", line 49, in main
+    await client.send_message(entity='@yka94', message=msg)
+          │      │                                     └ ''
+          │      └ <function MessageMethods.send_message at 0x0000020A0A4A12D0>
+          └ <telethon.client.telegramclient.TelegramClient object at 0x0000020A0A70E590>
+
+  File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\tg_prime_learn\lib\site-packages\telethon\client\messages.py", line 872, in send_message
+    raise ValueError(
+
+ValueError: The message cannot be empty unless a file is provided
+2022-12-22 11:29:55.881 | ERROR    | single_use.logme:logIt:53 - hello_from_py() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 2.348743418813345, 'name': 'hello_from_py', 'args': []}
+                 │                  └ {'call': 2.348743418813345, 'name': 'hello_from_py', 'args': []}
+                 └ {'hello_from_py': <function hello_from_py at 0x000001E310C4E0E0>, 'js_from_py': <function js_from_py at 0x000001E310C4E830>, ...
+
+TypeError: hello_from_py() missing 1 required positional argument: 'text'
+2022-12-22 11:29:58.512 | ERROR    | single_use.logme:logIt:53 - hello_from_py() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 4.734179102766412, 'name': 'hello_from_py', 'args': []}
+                 │                  └ {'call': 4.734179102766412, 'name': 'hello_from_py', 'args': []}
+                 └ {'hello_from_py': <function hello_from_py at 0x000001E310C4E0E0>, 'js_from_py': <function js_from_py at 0x000001E310C4E830>, ...
+
+TypeError: hello_from_py() missing 1 required positional argument: 'text'
+2022-12-22 11:30:03.281 | ERROR    | single_use.logme:logIt:53 - hello_from_py() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 7.845169182829399, 'name': 'hello_from_py', 'args': []}
+                 │                  └ {'call': 7.845169182829399, 'name': 'hello_from_py', 'args': []}
+                 └ {'hello_from_py': <function hello_from_py at 0x000001E310C4E0E0>, 'js_from_py': <function js_from_py at 0x000001E310C4E830>, ...
+
+TypeError: hello_from_py() missing 1 required positional argument: 'text'
+2022-12-22 11:30:06.017 | ERROR    | single_use.logme:logIt:53 - hello_from_py() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 9.074785746007713, 'name': 'hello_from_py', 'args': []}
+                 │                  └ {'call': 9.074785746007713, 'name': 'hello_from_py', 'args': []}
+                 └ {'hello_from_py': <function hello_from_py at 0x000001E310C4E0E0>, 'js_from_py': <function js_from_py at 0x000001E310C4E830>, ...
+
+TypeError: hello_from_py() missing 1 required positional argument: 'text'
+2022-12-22 11:30:39.761 | ERROR    | single_use.logme:logIt:53 - hello_from_py() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 11.810648701511855, 'name': 'hello_from_py', 'args': []}
+                 │                  └ {'call': 11.810648701511855, 'name': 'hello_from_py', 'args': []}
+                 └ {'hello_from_py': <function hello_from_py at 0x000001E310C4E0E0>, 'js_from_py': <function js_from_py at 0x000001E310C4E830>, ...
+
+TypeError: hello_from_py() missing 1 required positional argument: 'text'
+2022-12-22 11:30:41.761 | ERROR    | single_use.logme:logIt:53 - hello_from_py() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 13.275681042541457, 'name': 'hello_from_py', 'args': []}
+                 │                  └ {'call': 13.275681042541457, 'name': 'hello_from_py', 'args': []}
+                 └ {'hello_from_py': <function hello_from_py at 0x000001E310C4E0E0>, 'js_from_py': <function js_from_py at 0x000001E310C4E830>, ...
+
+TypeError: hello_from_py() missing 1 required positional argument: 'text'
+2022-12-22 11:30:43.121 | ERROR    | single_use.logme:logIt:53 - hello_from_py() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 15.198428159716487, 'name': 'hello_from_py', 'args': []}
+                 │                  └ {'call': 15.198428159716487, 'name': 'hello_from_py', 'args': []}
+                 └ {'hello_from_py': <function hello_from_py at 0x000001E310C4E0E0>, 'js_from_py': <function js_from_py at 0x000001E310C4E830>, ...
+
+TypeError: hello_from_py() missing 1 required positional argument: 'text'
+2022-12-22 11:30:47.857 | ERROR    | single_use.logme:logIt:53 - hello_from_py() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 16.371841679285428, 'name': 'hello_from_py', 'args': []}
+                 │                  └ {'call': 16.371841679285428, 'name': 'hello_from_py', 'args': []}
+                 └ {'hello_from_py': <function hello_from_py at 0x000001E310C4E0E0>, 'js_from_py': <function js_from_py at 0x000001E310C4E830>, ...
+
+TypeError: hello_from_py() missing 1 required positional argument: 'text'
+2022-12-22 11:31:07.217 | ERROR    | single_use.logme:logIt:53 - hello_from_py() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 18.311307450038015, 'name': 'hello_from_py', 'args': []}
+                 │                  └ {'call': 18.311307450038015, 'name': 'hello_from_py', 'args': []}
+                 └ {'hello_from_py': <function hello_from_py at 0x000001E310C4E0E0>, 'js_from_py': <function js_from_py at 0x000001E310C4E830>, ...
+
+TypeError: hello_from_py() missing 1 required positional argument: 'text'
+2022-12-22 11:31:12.657 | ERROR    | single_use.logme:logIt:53 - hello_from_py() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+
+> File "C:\Users\kishko_yuri\Desktop\tg_prime_learn\eel\__init__.py", line 341, in _process_message
+    return_val = _exposed_functions[message['name']](*message['args'])
+                 │                  │                 └ {'call': 1.531589645537215, 'name': 'hello_from_py', 'args': []}
+                 │                  └ {'call': 1.531589645537215, 'name': 'hello_from_py', 'args': []}
+                 └ {'hello_from_py': <function hello_from_py at 0x000001E310C4E0E0>, 'js_from_py': <function js_from_py at 0x000001E310C4E830>, ...
+
+TypeError: hello_from_py() missing 1 required positional argument: 'text'

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Примеры</p>
+
+<p>
+    <button id="hello">Hello from Py</button>
+    <button id="start_2">Next</button>
+</p>
+
+<input type="text" placeholder="Message Text" id="message_text"></input>
+
+<p>
+    <button id="send_message">Send Message</button>
+</p>
+
+
+<p id="log"></p>
+{% endblock %}
+
+{% block js %}
+<script src="js_pages/examples.js"></script>
+{% endblock %}
