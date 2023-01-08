@@ -1,0 +1,206 @@
+<!-- https://www.youtube.com/watch?v=ls_Eue1xUtY -->
+<!-- crash course for leaflet libriry  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #map { 
+        width: 100%;
+        height: 100vh; 
+        }
+</style>
+<body>
+    
+    <div id="map"></div>
+
+</body>
+</html>
+
+<!-- leaflet js -->
+
+<!-- <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+crossorigin=""></script> -->
+
+<script src="leaflet.js"
+integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+crossorigin=""></script>
+
+<script src="./data/point.js"></script>
+<script src="./data/line.js"></script>
+<script src="./data/polygon.js"></script>
+
+<script>
+// Map initialization
+
+    var map = L.map('map').setView([52.28992, 104.29633], 13);
+
+// osm layers
+
+    var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    })
+
+    var osm_2 = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    // zoom attrs are also can be customised
+	maxZoom: 20,
+    // minZoom: 12,
+    minZoom: 1,
+    // attribution - правый нижний угол окошка
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+    });
+
+    var osm_3 = L.tileLayer('https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: 'Map <a href="https://memomaps.de/">memomaps.de</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+
+    osm.addTo(map)
+    // osm_2.addTo(map);
+    // osm_3.addTo(map);
+
+    // добавляем все чтобы потом можно было вызывать в layers control
+    // это - если вдруг ошибка возникает
+
+    // osm's overwrite eachother if on is beyond the scope of another!
+
+// icon
+    var myIcon = L.icon({
+        iconUrl: 'marker_1.png',
+        iconSize: [88, 85],
+        // iconAnchor: [22, 94],
+        // popupAnchor: [-3, -76],
+        // shadowUrl: 'my-icon-shadow.png',
+        // shadowSize: [68, 95],
+        // shadowAnchor: [22, 94]
+    });
+
+    var myIconTwo = L.icon({
+        iconUrl: 'marker_2.png',
+        iconSize: [88, 85],
+    });
+
+// markers
+// https://leafletjs.com/reference.html#marker
+    var rgf_office = L.marker([52.28992, 104.29633], {
+        opacity: 0.5,
+        // and other params
+        icon: myIcon,
+        // draggable: true
+    })
+    var m_kvartal = L.marker([52.27313, 104.29003], {opacity: 0.5,icon: myIconTwo})
+
+    // rgf_office.addTo(map);
+
+    // get marker position
+    console.log(rgf_office.getLatLng());
+    console.log(rgf_office.getLatLng().lat);
+    console.log(rgf_office.getLatLng().lng);
+    // set marker position
+    // setLatLng(latlng)
+    // var latlng = L.latLng(50.5, 30.5);
+
+    // ALSO
+    // getIcon() 	
+    // setIcon(<Icon> icon) 	
+    // setOpacity(<Number> opacity)
+
+    // with popup
+    var popup_rgf = rgf_office.bindPopup('This is RGF office ' + rgf_office.getLatLng()).openPopup()
+    popup_rgf.addTo(map)
+    var popup_m_kvartal = m_kvartal.bindPopup('This is RGF office ' + m_kvartal.getLatLng()).openPopup()
+    popup_m_kvartal.addTo(map)
+
+    // convert to GeoJSON
+    console.log(rgf_office.toGeoJSON())
+
+// layer controller
+// https://leafletjs.com/examples/layers-control/
+
+    // #########################################################################
+    // GEOJSON
+    // #########################################################################
+
+    var pointData = L.geoJSON(pointJson).addTo(map)
+    var lineData = L.geoJSON(lineJson).addTo(map)
+    var polygonData = L.geoJSON(polygonJson, {
+        // на каждый полигона будет вызываться код ..2
+        onEachFeature: function(feature, layer){
+            // ..2
+            layer.bindPopup('<b>Name:</b> ' + feature.properties.name)
+        },
+        style: {
+            fillColor: 'red',
+            fillOpacity: 0.4,
+            color: '#acacac'
+        }
+    }).addTo(map)
+
+    console.log(pointData._leaflet_id)
+    // pointData.bindPopup('Открытый поп-ап - можно сделать при нажатии на кнопку или срабатывание события страницы').openPopup()
+    // на полигон или линию проще сделать чем на конкретную точку
+    console.log(lineData._leaflet_id)
+
+    // layer toggler
+    var baseMaps = {
+    "<span style='color: green'>osm</span>": osm,
+    "osm_2": osm_2,
+    "osm_3": osm_3
+    };
+
+    var overlayMaps = {
+        "Marker": rgf_office,
+        "Marker_two": m_kvartal,
+        "pointData": pointData,
+        "lineData": lineData,
+        "polygonData": polygonData
+    };
+
+    // you can remove layer if you want (но только из отображения в данную секунду, не знаю зачем это может пригодиться)
+    // как вариант - можно навесить данный функицонал на какой-либо event
+    // map.removeLayer(osm)
+    
+    // you can also remove a marker
+    // map.removeLayer(rgf_office)
+
+    var layerControl = L.control.layers(baseMaps, overlayMaps, {
+        // params
+        collapsed: false // default - is true (менюшка где мы выбираем слои карты - теперь всегда будет открыта)
+
+    })
+
+    layerControl.addTo(map);
+
+</script>
+
+<!-- tileLayer's - можно выбрать разные слои для карт -->
+<!-- https://leaflet-extras.github.io/leaflet-providers/preview/ -->
+
+<!-- tileLayer's for with google maps - если нужны google maps слои -->
+<!-- https://gis.stackexchange.com/questions/225098/using-google-maps-static-tiles-with-leaflet -->
+
+<!-- можно получить координаты наведя на место на карте -->
+<!-- https://geotree.ru/?lat=52.29780&lon=104.29640&z=12&mlat=52.2978&mlon=104.2964&c= -->
+
+<!-- geojson service -->
+<!-- https://geojson.io/#map=2/0/20 -->
+
+<!-- конвертер в geoJSON Shape и так далее -->
+<!-- https://mapshaper.org/ -->
+
+<!-- плагин для того чтобы не создавать js файлы вручную -->
+<!-- https://github.com/calvinmetcalf/leaflet-ajax -->
