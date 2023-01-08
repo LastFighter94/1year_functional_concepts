@@ -1,0 +1,10 @@
+main - how to iterate through a dictionary in python
+main1 - how to iterate through a dictionary in python / real-world examples
+main2 - how to iterate through a dictionary in python / build in functions
+https://realpython.com/iterate-through-dictionary-python/
+
+first_basics - first basics
+build_in_methods - build_in_methods
+https://realpython.com/python-dicts/
+
+dict_ = custom library

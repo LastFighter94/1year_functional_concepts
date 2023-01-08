@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Days cost project</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="payment_div">
+
+    <span class="logo">Day Payment Cost</span>
+
+    <button class="clear-btn">Clear all</button>
+
+    <p>Add payment / cost</p>
+
+    <input type="text" placeholder="payment name" id="item-name"/>
+    <label for="item-name">Name</label>
+
+    <input type="number" placeholder="cost" id="item-cost"/>
+    <label for="item-cost">Cost</label>
+
+    <button class="add-btn">Add payment</button>
+    <button class="update-btn">Update payment</button>
+    <button class="delete-btn">Delete payment</button>
+
+    <button class="back-btn">Back</button>
+
+    <ul id="item-list" class="collection">
+
+    </ul>
+
+    <p>Total day cost: <span id="total-cost">0</span></p>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

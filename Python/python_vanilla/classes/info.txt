@@ -1,0 +1,70 @@
+main
+
+main - python3-object-oriented-programming
+https://realpython.com/python3-object-oriented-programming/
+
+main1 - python-class-constructors: control-your-object-instantiation
+main2 - python-class-constructors: control-your-object-instantiation
+https://realpython.com/python-class-constructor/
+
+
+
+youtube_1
+
+main - Классы и объекты. Атрибуты классов и объектов
+https://www.youtube.com/watch?v=P4CNNo8jWj4&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=2
+
+main1 - Методы классов. Параметр self
+https://www.youtube.com/watch?v=Lw8TeLS4_IA&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=3
+
+main2 - Инициализатор __init__ и финализатор __del__
+https://www.youtube.com/watch?v=-J3Ou8-8vVk&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=4
+
+main3 - Магический метод __new__. Пример паттерна Singleton
+https://www.youtube.com/watch?v=-xoT6rntpK0&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=5
+
+main4 - Методы класса (classmethod) и статические методы (staticmethod)
+https://www.youtube.com/watch?v=78PTvj2wYH8&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=6
+
+main5 - Режимы доступа public, private, protected. Сеттеры и геттеры
+https://www.youtube.com/watch?v=RipfqbH0eqY&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=7
+
+main6 - Магические методы __setattr__, __getattribute__, __getattr__ и __delattr__
+https://www.youtube.com/watch?v=CAx-NLFc-Z4&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=8
+
+main7 - Паттерн "Моносостояние" | Объектно-ориентированное программирование Python
+https://www.youtube.com/watch?v=WNj55JzXnvc&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=9
+
+main8 - Свойства property. Декоратор @property | Объектно-ориентированное программирование Python
+https://www.youtube.com/watch?v=MxviMwbGl3I&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=10
+
+main9 - Свойства property. Декоратор @property | Объектно-ориентированное программирование Python
+https://www.youtube.com/watch?v=ury9pdPXa6s&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=11
+
+main10 - Дескрипторы (data descriptor и non-data descriptor)
+https://www.youtube.com/watch?v=ACqsYPbgePk&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=12
+
+main11 - Магический метод __call__. Функторы и классы-декораторы
+https://www.youtube.com/watch?v=UqX5Qekb9sU&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=13
+
+main12 - Магические методы __str__, __repr__, __len__, __abs__
+https://www.youtube.com/watch?v=Aabdr3yxEhQ&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=14
+
+main13 - Магические методы __add__, __sub__, __mul__, __truediv__
+https://www.youtube.com/watch?v=OMMQ1ZNKK6Q&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=15
+
+main14 - Магические методы __eq__ и __hash__
+https://www.youtube.com/watch?v=Cfx4VCnWeCE&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=17
+
+
+
+nice_tutorials
+
+1) func_decorators
+https://www.youtube.com/watch?v=v0qZPplzwUQ
+
+2) inheritance_explained_1
+https://www.youtube.com/watch?v=RSl87lqOXDE&t=0s
+
+3) property_explained_1
+https://www.youtube.com/watch?v=jCzT9XFZ5bw

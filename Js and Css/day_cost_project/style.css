@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-border: 2px solid black;
+}
+
+.wrapper {
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.payment_div {
+    background-color: #cae8ab;
+    border: var(--main-border);
+    text-align: center;
+    display: block;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.logo {
+    color: #006011;
+    font-size: 20px;
+    display: block;
+}
+
+button, input, p, li, .logo {
+    margin: 5px;
+    padding: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff6ec;
+}
+
+a {
+    color: black;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+}
+
+.add-btn {
+    background-color: #a4fc8c;
+}
+
+.update-btn {
+    background-color: #fcbb8c;
+}
+
+.delete-btn {
+    background-color: #fc8c9d;
+}
+
+.back-btn {
+    background-color: #9f9f9f;
+}
+
+.clear-btn {
+    background-color: #abc7e8;
+}
+
+.collection {
+    list-style: none;
+}
