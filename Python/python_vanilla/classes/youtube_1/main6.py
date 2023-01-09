@@ -57,6 +57,18 @@ if __name__ == '__main__':
             # без False - вывело бы attribute error
             # print("__getattr__: " + item)
 
+        # пояснение к __getattr__
+        # class Test():
+        #     def __init__(self, x, y):
+        #         self.x = x
+        #         self.y = y
+        #
+        #     def __getattr__(self, item):
+        #         return 'shit'
+        #
+        # test = Test(1, 2)
+        # print(test.not_existing_attr)
+
         # 5
         def __delattr__(self, item):
             print("__delattr__: " + item)
