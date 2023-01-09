@@ -60,11 +60,8 @@ https://www.youtube.com/watch?v=Cfx4VCnWeCE&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9r
 
 nice_tutorials
 
-1) func_decorators
-https://www.youtube.com/watch?v=v0qZPplzwUQ
-
-2) inheritance_explained_1
+1) inheritance_explained_1
 https://www.youtube.com/watch?v=RSl87lqOXDE&t=0s
 
-3) property_explained_1
+2) property_explained_1
 https://www.youtube.com/watch?v=jCzT9XFZ5bw
