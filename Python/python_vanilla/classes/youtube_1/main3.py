@@ -19,8 +19,11 @@ if __name__ == '__main__':
     #         self.x = x
     #         self.y = y
 
+    # # вывод
+    # test = Point()
+
     # # 2
-    # Singleton pattern example
+    # # Singleton pattern example
     # class DataBase:
     #     __instance = None
     #     # этот атрибут будет ссылкой на экземпляр класса
@@ -61,4 +64,5 @@ if __name__ == '__main__':
     # # print(db2)
     # # print(db2.user)
     # print(id(db), id(db2))
+    # print(id(db) == id(db2))
     # stop
