@@ -23,7 +23,7 @@ https://www.youtube.com/watch?v=-J3Ou8-8vVk&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9r
 main3 - Магический метод __new__. Пример паттерна Singleton
 https://www.youtube.com/watch?v=-xoT6rntpK0&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=5
 
-main4 - Методы класса (classmethod) и статические методы (staticmethod)
+main4 - Методы класса (classmethod) и статические методы (staticmethod), assert and validation
 https://www.youtube.com/watch?v=78PTvj2wYH8&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=6
 
 main5 - Режимы доступа public, private, protected. Сеттеры и геттеры
