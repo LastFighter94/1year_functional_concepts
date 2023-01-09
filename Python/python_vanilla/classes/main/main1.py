@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # # видео о __repr__ и __str__
     #
     # point = Point_1(21, 42)
-    # print(point.class_name())  # print name of the class print class name
+    # print(point.class_name())  # print name of the class
     # # stop
     #
     # # point

@@ -1,6 +1,6 @@
 main
 
-main - python3-object-oriented-programming
+main - python3-object-oriented-programming - основы
 https://realpython.com/python3-object-oriented-programming/
 
 main1 - python-class-constructors: control-your-object-instantiation

@@ -20,7 +20,9 @@ if __name__ == '__main__':
         def __str__(self):
             return f"{self.name}"
 
+
     cat = Cat('Bob')
+    print(cat.__class__.__name__) # get name of the class
     # cat
     # print(cat)
 
