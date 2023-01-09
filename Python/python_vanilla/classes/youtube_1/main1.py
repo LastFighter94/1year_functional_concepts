@@ -52,11 +52,14 @@ if __name__ == '__main__':
     # # ЗАТО!
     # Example_2.do_something(ex_2)
     # ex_2.do_something()
+    # # эти две записи идентичны, мы вызвали метод класса двумя способами
+    # # Example_2.do_something(ex_2) - вместо self положили ссылку на экземпляр класса, вызвали метод из самого класса
+    # # ex_2.do_something() - вызвали метод из экземпляра класса и self подставился автоматически
     # # stop
 
     # # 3
-    # self нужен для того чтобы мы могли работать
-    # с конкретными атрибутами локального экземпляра класса
+    # # self нужен для того чтобы мы могли работать
+    # # с конкретными атрибутами локального экземпляра класса
     # class Example_3_4_5:
     #     atr_1 = 'atr_1'
     #     atr_2 = 100
@@ -73,16 +76,16 @@ if __name__ == '__main__':
     #
     # ex_3 = Example_3_4_5()
     # ex_4 = Example_3_4_5()
-    # ex_4.do_something(10, 20)
     # ex_3.do_something(1, 2)
+    # ex_4.do_something(10, 20)
     # print(ex_3.__dict__)
     # print(ex_4.__dict__)
     #
     # ex_5 = Example_3_4_5()
-    # ex_5.do_something(10, 20)
+    # ex_5.do_something(100, 200)
     # print(ex_5.do_something_2())
     #
     # # можно получить доступ к методам также как к атрибутам
     # f = getattr(ex_5, 'do_something_2')
-    # print(f)
-    # print(f())
+    # print(f) # <bound method Example_3_4_5.do_something_2 of <__main__.Example_3_4_5 object at 0x000001F67DEED100>>
+    # print(f()) # (100, 200)
