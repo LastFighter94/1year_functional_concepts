@@ -13,8 +13,10 @@ class ParentClass(ParentOfParentClass):
         print('************************')
         print(someList, someStr, someNum, someDict, '!!!')
         # super().__init__(someList, someStr, someNum)
+        # эти две строчки идентичны, только строчка выше - more clean
         # ParentOfParentClass.__init__(self, someList, someStr, someNum)
         t = someDict.get('test')
+        # print(t)
 
 class First(ParentClass):
     def __init__(self, someList: list, someStr: str = None, someNum: int = 0, someDict: dict = None):
