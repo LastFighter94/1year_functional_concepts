@@ -1,0 +1,21 @@
+cases:
+https://stackoverflow.com/questions/64791687/webpack-cli-unknown-argument-output
+
+example_1
+
+1) npm init -y - создаем пустой манифест
+2) npm i vue - накатываем vue в локальны пакеты
+
+3) https://webpack.js.org/guides/installation/
+локально устанавливаем webpack 
+
+(примечание: "-D" == "--save-dev")
+
+- в видео из примера был webpack 4.27.1 - с ним возникли проблемы при 
+
+"scripts": {
+"test": "test";
+"build": "webpack --output dist/bundle.js"
+}
+
+npm run build
