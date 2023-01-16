@@ -51,7 +51,7 @@ for passport in xml.xml.паспорт_гкм:
 
             if obj.тип == 'точка':
                 obj_data.points = xml_coord(obj.центр)
-                points.append(xml_coord(obj.центр)) # добавить в points словарик
+                points.append(xml_coord(obj.центр))
 
             if obj.тип == 'полигон' or obj.тип == 'линия':
                 rings = []
