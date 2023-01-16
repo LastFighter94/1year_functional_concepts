@@ -2,7 +2,6 @@ import glob
 import untangle
 import arm.xml
 from alt.dict_ import dict_
-import os
 
 _send_dir = 'xml_для_отправки/'
 
