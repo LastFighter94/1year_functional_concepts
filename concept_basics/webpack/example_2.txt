@@ -1,0 +1,106 @@
+https://www.youtube.com/watch?v=GNEyY70Zl30
+
+вся информация есть на официальном сайте webpack
+
+Webpack - это сборщик модулей в одну систему (bundler)
+
+организация кода
+поддержка модулей (import|export)
+автоматизация рутинных задач: запуск SASS, BABEL
+
+LOADERS - без дополнительных программ сам WEBPACK не умеет ничего, то есть
+фактически webpack это программа, которая использует LOADERS, которые в свою очередь
+уже знают как подгружать тот или иной файл в зависимости от его расширения
+
+Например: если мы хотим компилировать JS, то нам потребуется js-loader, либо babel-loader
+	  если мы хотим организовывать наши стили, то понадобиться style-loader
+	  и так далее
+
+1) npm i -D webpack webpack-cli
+2) echo.> webpack.config.js
+
+по умолчанию webpack использует модули node
+webpack config - фактически это JS объект
+- entry - здесь указываем точку входа JS исходную
+- output - куда мы все будем собирать
+
+
+"build": "./node_modules/.bin/webpack" - не сработало
+"build": "webpack" - сработало 
+
+
+
+Инструмент исключительно для разработки и отладки
+
+devtool: "source-map" в webpack config - по умолчанию стоит eval
+
+source-map эта технология, которая позволяет к любому файлу JS добавить описание того где хранятся
+source maps, а source maps это навигация по тем файлам, которые были уже добавлены к скомпилированной
+версии для отладки этого всего в браузере
+
+eval-source-map самый быстрый способ компиляции и рекомпиляции кода
+
+
+
+3) дальше npm install -D babel-loader @babel/core @babel/preset-env webpack
+
+    "@babel/core": "^7.20.12", - ядро
+    "@babel/preset-env": "^7.20.2", - дополнительная настройка о том как компилировать ту или иную версию JS
+    "babel-loader": "^9.1.2", - это адаптер между webpack и самим babel
+
+когда ставим любой loader в config нужно добавить поле module
+дальше в поле модуль мы указываем правила, по которым мы компилируем
+определенный вид файла с определенным расширением и указываем какой для
+этого использовать loader
+
+module: {
+  rules: [
+    {
+      test: /\.m?js$/, (расширение)
+      exclude: /(node_modules|bower_components)/, (какие файлы мы можем не включать в конвертацию)
+      use: { (указывает какой лоадер использовать)
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      }
+    }
+  ]
+}
+
+4) дальше 
+npm install --save-dev style-loader
+npm install --save-dev css-loader
+
+новый rule
+
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+
+5) в целом помимо лоадеров в вебпаке еще существуют плагины
+
+npm install --save-dev mini-css-extract-plugin
+
+webpack.config
+
+const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+        use: ["style-loader", "css-loader"], - эту строчку меняем
+
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+
+добавить рядом с module
+
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "styles.css"
+    }),
+  ],
+
+тоже касается и sass, scss LOADERS

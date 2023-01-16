@@ -1,0 +1,8 @@
+1) npm config set init-author-name "Yuri Kishko" set default author name
+2) npm set init-license "MIT" set default licence name
+
+3) npm config get init-author-name = получить автора дефолтного
+4) npm get init-license = получить лицензию дефолтную
+
+5) npm config delete init-license
+6) npm config delete init-author-name

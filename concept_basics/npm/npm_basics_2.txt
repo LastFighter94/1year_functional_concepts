@@ -65,3 +65,6 @@ npm up
 #################
 npm i чтобы установить пакеты из package.json и package-lock.json нужно просто написать
 npm i --production чтобы установить пакеты из package.json и package-lock.json без dev dependencies
+
+#################
+npm help command_name - открыть документацию по команде

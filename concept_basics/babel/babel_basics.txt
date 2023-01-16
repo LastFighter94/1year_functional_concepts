@@ -1,0 +1,22 @@
+Babel - это JS компилятор, но в отличии от классических компиляторов, которые переводят ваш код
+в машинный код, Babel переводит EcmaScript современной спецификации в более старую спецификацию, для 
+того чтобы увеличить поддержку браузерами
+
+также Babel нужен для React Js - JSX, ведь JSX нужно компилировать
+
+Babel поддерживает Flow, TypeScript 
+
+1) npm install --save-dev @babel/core @babel/cli
+2) npm run build (скомпилировали для проверки - ничего не сработало)
+3) npm install --save-dev @babel/preset-env (установили пресет для компиляции)
+
+4) echo.> .babelrc
+
+теперь npm run build работает
+
+крайнее: 
+
+    "build": "babel src -d build",
+    "watch": "babel src -d build -w"
+
+package-lock - возможность watch изменения
