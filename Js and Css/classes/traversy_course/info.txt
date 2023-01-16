@@ -1,0 +1,7 @@
+app - this keyword, function constructors
+app_2 - built in constructors
+app_3 - prototypes explained
+app_4 - prototypal inheritance
+app_5 - using object create
+app_6 - ES6 classes
+app_7 - sub classes
