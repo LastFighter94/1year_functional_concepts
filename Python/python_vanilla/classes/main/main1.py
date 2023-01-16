@@ -21,7 +21,7 @@ if __name__ == '__main__':
     #         return f"{type(self).__name__}(x={self.x}, y={self.y})"
     #
     #     def class_name(self):
-    #         return f"{type(self).__name__}"
+    #         return f"{type(self).__name__}" # get class_name __name__ example
     #
     #
     # # https://www.youtube.com/watch?v=Aabdr3yxEhQ&list=PLA0M1Bcd0w8zPwP7t-FgwONhZOHt9rz9E&index=15
@@ -54,9 +54,8 @@ if __name__ == '__main__':
     # b = B_2(21)
     # # Initialize the new instance of A_2
     #
-    # # b - value will throw an attribute error
-    # # 'A' object has no attribute 'b_value'
-    # # .b_value
+    # # b.b_value will throw an attribute error
+    # # 'A_2' object has no attribute 'b_value'
     # # stop
     #
     # print(isinstance(b, B_2))  # False
@@ -64,7 +63,7 @@ if __name__ == '__main__':
     # print(b.a_value)  # 42
 
     # # 2
-    # checking __init__ arguments
+    # # checking __init__ arguments
     # class Rectangle:
     #     def __init__(self, width, height):
     #         if not (isinstance(width, (int, float)) and width > 0):
@@ -73,8 +72,8 @@ if __name__ == '__main__':
     #         if not (isinstance(height, (int, float)) and height > 0):
     #             raise ValueError(f"positive height expected, got {height}")
     #         self.height = height
-    #
-    #
+
+
     # rectangle = Rectangle(-21, 42) #  this will throw an exception
 
     # # 3
