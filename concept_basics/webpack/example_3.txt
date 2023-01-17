@@ -1,0 +1,14 @@
+https://www.youtube.com/watch?v=DW28sSQxBO8
+
+1) npm i -D webpack webpack-cli
+2) npm i -D webpack-dev-server
+
+чтобы запустить web-server нужно прописать команду npx webpack serve
+ctrl + c = выход из life-server
+
+3) npm i style-loader css-loader sass-loader
+4) npm i sass 
+
+5) npm i html-webpack-plugin 
+
+все подробные объяснения в файле webpack-config
