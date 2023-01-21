@@ -14,7 +14,7 @@ module.exports = {
         // filename: 'index.js',
         filename: '[name][contenthash].js',
         assetModuleFilename: '[name][ext]', // команда предназначенная для того чтобы сохранять изображения с оригинальным именем и расширением
-        clean: true // для того чтобы старый hash файл удалялся (строка 15)
+        clean: true // для того чтобы старый hash файл удалялся - две строчки выше filename: '[name][contenthash].js'
     },
     performance: {
       hints: false, // отключаем подсказки (от изображений)

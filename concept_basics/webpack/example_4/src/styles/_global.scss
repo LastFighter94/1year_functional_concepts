@@ -1,0 +1,19 @@
+$primaryColor: darkcyan;
+$secondaryColor: darkSlategray;
+
+html {
+    font-family: generalFont;
+}
+
+h1 {
+    color: $primaryColor;
+}
+
+.container {
+    &__subtitle {
+        color: $secondaryColor;
+        display: block;
+        height: 140px;
+        background: url("../images/image.jpg");
+    }
+}

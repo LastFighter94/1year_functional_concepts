@@ -1,0 +1,24 @@
+https://html2jade.org/
+
+конвертер из html в pug
+
+
+
+https://www.youtube.com/watch?v=XemDmsmnYII
+
+18:00 остановка
+
+https://github.com/pugjs/pug
+
+npm install pug
+npm install pug-cli -g (если устанавливать не глобально, не вкатит)
+
+в директории .pug файла ввести команду 
+pug index.pug 
+после чего будет рендер index.html
+
+в директории .pug файла ввести команду 
+pug index.pug -P
+после чего будет рендер index.html без минификации
+
+!!! можно в зависимости от переменных рендерить различные шаблоны
