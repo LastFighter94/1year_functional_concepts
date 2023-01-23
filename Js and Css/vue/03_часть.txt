@@ -8,4 +8,3 @@ Vue компилирует шаблоны в высоко оптимизиров
 изменении состояния VUE приложения.
 
 2) https://vuejs.org/guide/essentials/reactivity-fundamentals.html#declaring-reactive-state
-

@@ -1,0 +1,10 @@
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
+
+https://www.youtube.com/watch?v=np08WdS9OXg index
+https://www.youtube.com/watch?v=mSbyhHfxs04 index_2
+
+Что такое прокси:
+
+по сути это некоторый класс в JS, который позволяет создавать различные ловушки для
+объектов, функций, классов и так далее

@@ -1,0 +1,58 @@
+1) https://vuejs.org/guide/essentials/reactivity-fundamentals.html
+
+Options API:
+
+с options API мы используем data() {return {name: 'Yuri'}}, ... чтобы определить состояние компонента
+
+data это функция, которая возвращает объект
+
+Vue вызывает функцию при создании новой сущности компонента и обертывает ее в систему реактивности.
+
+ `this` refers to the component instance.
+ `this` относится к сущности компонента.
+
+
+!!!
+
+It is possible to add a new property directly to this without including it in data. 
+However, properties added this way will not be able to trigger reactive updates.
+
+можно добавить свойство к компоненту через this в "хуках" или еще где-либо, но тогда
+это свойство не будет обладать реактивностью.
+
+$ _ эти префиксы нужно избегать, так как они могут пересекаться к build-in API components methods
+
+при испольховании methods: {method_name(){this.data_attr == 'something new'}}
+надо избегать стрелочных функций, так как "this" контекст будет упущен
+
+Just like all other properties of the component instance, the methods 
+are accessible from within the component's template. 
+Inside a template they are most commonly used as 
+event listeners:
+
+DOM Update Timing
+
+когда ты мутируешь реактивное состояние (data) - DOM обновляется автоматически, однако,
+стоит учитывать что DOM обновляется не синхронно - вместо этого VUE буферизирует
+обновления до "next tick" в цикле обновления, чтобы убедиться что каждый
+компонент обновляется только один раз вне зависимости от того, сколько
+изменений в состояние вы внесли.
+
+NEXT_TICK
+
+!!!
+
+To wait for the DOM update to complete after a state change, you can use the nextTick() global API:
+
+import { nextTick } from 'vue'
+
+export default {
+  methods: {
+    increment() {
+      this.count++
+      nextTick(() => {
+        // access updated DOM
+      })
+    }
+  }
+}
