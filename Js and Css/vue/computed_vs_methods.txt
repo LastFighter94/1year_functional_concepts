@@ -1,0 +1,21 @@
+https://vuejs.org/guide/essentials/computed.html#computed-caching-vs-methods
+
+In comparison, a method invocation will always run the function whenever a re-render happens.
+
+В сравнении, вызов метода всегда будет выполнять функцию, как только re-render происходит (в отличии от computed,
+который будет вызываться только в зависимости от его реактивной зависимости в data)
+
+computed properties are cached based on their reactive dependencies
+
+Why do we need caching? Imagine we have an expensive computed property list, 
+which requires looping through a huge array and doing a lot of computations. 
+Then we may have other computed properties that in turn depend on list. 
+Without caching, we would be executing list’s getter many more times 
+than necessary! 
+
+Зачем нам нужно кэширование? Представьте что у вас есть большое "вычисляемое свойство" список,
+которое подразумевает цикл по грмоадному списку, выполняя множество различных вычислений.
+
+Потом нам может понадобиться другое "вычисляемое свойство", которое зависит от того списка.
+Без кэширования, мы будем вызывать "геттеры" списка больше чем нужно.
+
