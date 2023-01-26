@@ -81,3 +81,4 @@ vuex
 - history mode YES
 3) npm run serve
 4) vue devtools (beta - для vue3 версии)
+5) npm i axios
