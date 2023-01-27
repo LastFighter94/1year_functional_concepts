@@ -1,0 +1,43 @@
+1) https://www.youtube.com/watch?v=nu5mdN2JIwM&list=PLRlbDmjayb7aMt0y8wX6tDT2HVBja2-af&index=2
+
+Что такое Sass, scss
+
+- syntactically awesome stylesheets
+- css preprocessor / extension
+- позволяет вам использовать css так как вы бы не смогли его использовать без sass, scss
+	- более эффективный css с логикой, условной отрисовкой и даже циклами
+
+!!! БРАУЗЕР не читает sass, scss файлы напрямую, их надо перевести в css - 
+для того чтобы сделать это нужен sass, scss компилятор, есть множество
+вариантов компиляторов, но здесь будем использовать npm пакетик
+
+а также через extension в vs-code - live-sass-compiler
+
+- переменные (в css тоже есть такой функционал, однако здесь он реализован удобнее)
+- Nesting - одна из фишек sass, scss (влаживание тегов)
+- модули (в css есть импорты, но когда мы грузим css файл, идет несколько запросов, а вот в
+scss, sass - это все происходит до компиляции, ведь в итоге у нас всего лишь один css файл)
+- mixins, functions - позволяют нам создавать блоки css 
+- inheritance - наследование в принципе как у классов в python (className(parentClassName)) или как в JS
+- операторы - для расчетов
+- условная отрисока conditional
+
+
+###################################################
+
+Для компиляции (глобальная установка)
+npm i -g sass
+потом
+sass --watch filepath/file.scss output_filepath/file.css
+например
+sass --watch scss/style.scss css/style.css
+
+А МОЖНО использовать live sass compiler (extension vscode)
+настройки расширения в папке extension_sass
+расширение также учитывает ошибки и показывает их в терминале vscode
+при watching state 
+
+###################################################
+
+_filename.scss это partials, которые мы обычно импортируем в основной scss
+нижнее подчеркивание в начале файла - говорит об этом
