@@ -21,7 +21,7 @@
             />
         </my-dialog>
         <post-list
-            :posts="posts"
+            :posts="sortedPosts"
             @remove="removePost"
             v-if="!isPostsLoading"
         />
@@ -85,6 +85,20 @@ export default {
     },
     mounted(){
             this.fetchPosts()
+    },
+    computed: {
+        sortedPosts(){
+            // мы не хотим чтобы функция sort мутировала исходный массив с постами
+            // поэтому массив с постами разворачиваем в другой массив и сортировать будем уже его
+            return [...this.posts].sort((post1, post2) => post1[this.selectedSort]?.localeCompare(post2[this.selectedSort]))
+        }
+    },
+    watch: {
+        // selectedSort(newValue){
+        //     this.posts.sort((post1, post2) => {
+        //         return post1[newValue]?.localeCompare(post2[newValue])
+        //     })
+        // }
     }
 }
 </script>

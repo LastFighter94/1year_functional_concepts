@@ -1,0 +1,90 @@
+свойство transform применяется только к блочным объектам
+
+если мы хотим применить это свойство к строчному тегу, то в этом
+случае мне необходимо добавить параметр, который сделает мой объект
+строчно-блочным либо блочным, например display: inline-block, display: block и так далее
+
+ТОЖЕ самое касается и псевдоэлементов!
+не смотря на то что псевдоэлемент может принадлежать блочному элементу, сам он по себе
+является строчным элементом
+
+только тогда будет работать свойство transform!
+
+также важно помнить что трансформируемые объекты никак не влияют на окружение! и помимо
+этого к ним можно применять различные анимации например с помощью свойства transition,
+либо с помощью конструкции animation + keyframes
+
+https://www.youtube.com/watch?v=0KNY0MJQSPI&list=PLBTCsHd7-SaX74WNr4f9zbasL7iQwBK1X&index=2 - css transition
+https://www.youtube.com/watch?v=uQEGUpsnqsw - css transform
+
+вся суть: есть функционал анимаций, который можно применять либо по умолчанию на стиль, либо при наведении либо
+как-нибудь еще 
+
+При наведении - желательно сделать transition: all 0.8s ease 0s; для плавности анимации.
+
+можно совмещать несколько свойств в transform: property, property, property через запятую
+
+некоторые свойства не отрабатывают в некоторых браузерах - поэтому надо быть внимательнее
+
+#########################################################
+
+https://www.youtube.com/watch?v=yZFg3cuq_LU - css transition
+
+первое свойство 
+transition-duration: 1s или 1000ms или 500ms
+количество времени, при котором будет происходить переход
+
+второе свойство
+transition-propetry: all (по умолчанию)
+transition-propetry: background-color
+transition-propetry: background-color, top, box-shadow...
+
+комбинация двух свойств
+transition-duration: 1s 2s;
+transition-property: background-color, top;
+за 1s background-color будет меняться, за 2s top
+
+ПОМНИ! далеко не все свойства поддаются анимации (например display не анимируется)
+
+третье свойство
+transition-delay: 0s; (по умолчанию)
+
+transition-delay: 1s, 2s;
+transition-duration: 1s 2s;
+transition-property: background-color, top;
+задержка выполнения перехода background-color задержится на 1s, top на 2s
+
+четвертое свойство 
+transition-timing-function: ease;
+задает стиль нашего перехода (также для каждого transition-property можно указывать свой стиль через запятую)
+
+содержит в себе css свойство или свойства к которым будет (будут) применен эффект перехода
+
+TRANSITION: transition-property, transition-duration, transition-timing-function, transition-delay
+
+свойства могут наклыдваться как на :hover так и нет, как пожелаешь
+
+можно указывать через запяпутю несколько transitions
+
+transition: padding 1s ease 0s, color 2s ease-in 3s
+
+вся суть: есть функционал перехода анимаций, который можно применять либо по умолчанию на стиль, либо при наведении либо
+как-нибудь еще 
+
+#########################################################
+
+@keyframes animation_name{
+	0% {
+		css-prop: value;
+	}
+	50% {
+		css-prop: value;
+		css-prop2: value;
+		и так далее...
+	}
+	100% {
+		css-prop: value;
+	}
+}
+
+https://www.youtube.com/watch?v=GKgOOuTL0po - key frames animation
