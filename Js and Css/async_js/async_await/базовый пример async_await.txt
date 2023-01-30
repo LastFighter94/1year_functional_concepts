@@ -1,0 +1,56 @@
+// функция которая возвращает промис и которая делает искусственную задержку
+
+const delay = ms => {
+	return new Promise(r => setTimeout(() => r(), ms))
+}
+
+// url для запросов
+
+const url = 'httpds:jsonplaceholder.typicode.com/todos'
+
+
+
+# Пример для сравнения_1 (который "не очень")
+
+// создали функция в которой возвращаем промис, после истечения которого
+// делаем запрос на url, после чего с полученным результатом делаем .json(), что тоже возвращает промис
+
+// function fetchTodos(){
+//     console.log('Fetch todo started...')
+//     return delay(2000)
+//         .then(() => fetch(url))
+//         .then(response => response.json())
+// }
+
+// потом вызвали эту функцию и с ее результатом делаем уже console.log
+// все это муторно и неудобно
+
+// fetchTodos()
+//     .then(data => {
+//         console.log('Data:', data)
+//     })
+//     .catch(e => console.log(e))
+
+# Пример для сравнения_2
+
+// обернули асинхронную логику в async
+// сделали try catch finally во избежание ошибок и для 
+// финального вывода какого-нибудь результата (который точно будет выведен даже если будет совершена ошибка)
+
+
+async function fetchAsyncTodos(){
+    console.log('Fetch todo started...')
+    try {
+        await delay(2000) // ждем 2 секунды, обрабатываем промис с await вместо then! мы не перейдем к 
+	// следующей строчке пока промис выше не "зарезолвиться" и также со строчками ниже
+        const response = await fetch(url) // записываем результат промиса с fetch в переменную благодаря await
+        const data = await response.json() // тоже самое но только теперь .json()
+        console.log('Data:', data) // вуаля
+    } catch (e) {
+        console.error(e)
+    } finally {
+        // finally
+    }
+}
+
+fetchAsyncTodos()

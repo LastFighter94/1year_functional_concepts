@@ -30,9 +30,11 @@
             v-if="!isPostsLoading"
         />
         <div v-else>Идет загрузка...</div>
+        <div ref="observer" class="observer"></div>
+
         <!-- <post-list v-bind:posts="posts"/> -->
 
-        <div class="page__wrapper">
+        <!-- <div class="page__wrapper">
             <div 
                 v-for="pageNumber in totalPages" 
                 :key="pageNumber" 
@@ -40,10 +42,11 @@
                 :class="{
                     'current-page': page === pageNumber
                 }"
+                @click="changePage(pageNumber)"
             >
             {{ pageNumber }}
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -88,10 +91,14 @@ export default {
         showDialog(){
             this.dialogVisible = true
         },
+        // changePage(pageNumber){
+        //     this.page = pageNumber
+        //     // this.fetchPosts()
+        // },
         async fetchPosts(){
             try {
                 this.isPostsLoading = true
-                setTimeout(async () => {
+                // setTimeout(async () => {
                     // const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10')
                     const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
                         params: {
@@ -103,17 +110,48 @@ export default {
                     this.totalPages = Math.ceil(response.headers['x-total-count'] / this.limit)
                     this.posts = response.data
                     this.isPostsLoading = false
-                }, 1000)
+                    console.log('fetch posts')
+                // }, 1000)
 
-             } catch (e) {
+            } catch (e) {
                 alert('ошибка')
-            } finally {
-                // this.isPostsLoading = false
-            }
+            } 
+        },
+        async loadMorePosts(){
+            try {
+                // this.isPostsLoading = true
+                // setTimeout(async () => {
+                    this.page += 1
+                    const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
+                        params: {
+                            _page: this.page,
+                            _limit: this.limit
+                        }
+                    })
+                    this.totalPages = Math.ceil(response.headers['x-total-count'] / this.limit)
+                    this.posts = [...this.posts, ...response.data]
+                // }, 1000)
+            } catch (e) {
+                alert('ошибка')
+            } 
         }
     },
     mounted(){
             this.fetchPosts()
+            const options = {
+                // root: document.querySelector('#scrollArea'),
+                rootMargin: '0px',
+                threshold: 1.0
+            }
+            // используем стрелочную функцию, так как потеряли контекст this компонента
+            const callback = (entries, observer) => {
+                if (entries[0].isIntersecting && this.page < this.totalPages){
+                    this.loadMorePosts()
+                    console.log('load more posts')
+                }
+            }
+            const observer = new IntersectionObserver(callback, options)
+            observer.observe(this.$refs.observer)
     },
     computed: {
         sortedPosts(){
@@ -130,6 +168,10 @@ export default {
         //     this.posts.sort((post1, post2) => {
         //         return post1[newValue]?.localeCompare(post2[newValue])
         //     })
+        // }
+
+        // page(){
+        //     this.fetchPosts()
         // }
     }
 }
@@ -168,6 +210,11 @@ scoped флаг -->
 
 .current-page {
     border: 2px solid teal;
+}
+
+.observer {
+    height: 30px;
+    background: green;
 }
 
 </style>

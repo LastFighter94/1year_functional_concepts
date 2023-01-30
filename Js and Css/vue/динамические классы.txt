@@ -1,0 +1,21 @@
+мы можем динамически bind классы
+
+для этого мы передаем объект, в котором мы как ключи передаем
+названия классов, а как значения мы передаем какое-либо логическое значение
+
+        <div class="page__wrapper">
+            <div 
+                v-for="pageNumber in totalPages" 
+                :key="pageNumber" 
+                class="page"
+                :class="{
+                    'current-page': page === pageNumber
+                }"
+            >
+            {{ pageNumber }}
+            </div>
+        </div>
+
+точно также можно динамически bind какие-то inline styles
+
+:style="{...}"
