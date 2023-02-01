@@ -1,0 +1,60 @@
+во Vue постраничная навигация реализована крайне просто
+
+массив объектов, в которых мы будем описывать маршруты к нашим страницам и прочие параметры
+
+import Main from '@/pages/Main'
+
+const router = [
+    {
+        path: '/',
+        component: Main
+    }
+]
+
+по аналогии с 
+import { createApp } from 'vue'
+const app = createApp(App)
+
+есть функция createRouter (она параметром принимает некий объект с опциями - то есть
+сами маршруты, а также web историю history.mode)
+
+import Main from '@/pages/Main'
+import { createRouter, createWebHistory } from 'vue-router'
+
+const routes = [
+    {
+        path: '/',
+        component: Main
+    }
+]
+
+const router = createRouter({
+    routes,
+    // history: createWebHistory(process.env.BASE_URL) // возможно вызывать функцию с пустыми аргументами, и она все сама 
+    // по умолчанию подтянет
+    history: createWebHistory()
+})
+
+export default router;
+
+ТЕПЕРЬ ЭТОТ РОУТЕР В ПРИЛОЖЕНИИ НАДО ЗАРЕГЕСТРИРОВАТЬ
+
+переходим в файл main
+
+import router from '@/router/router'
+
+app
+    .use(router)
+    .mount('#app')
+
+у экземпляра нашего приложения мы можем вызвать функцию use - подобным образом подключаются любые плагины,
+библиотеки, bootstrap, vuex и так далее (во VUE 2 это делается иначе - можно ознакомиться в документации)
+
+#############################
+
+router-link to="/foo"></router-link>
+
+#############################
+
+в кадом экземпляре компонента есть специальный объект router у которого есть ряд функций, но самая
+часто используемая это push
