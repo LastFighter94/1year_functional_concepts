@@ -1,0 +1,2 @@
+https://www.typescriptlang.org/play - песочница TS
+https://habr.com/ru/post/542234/ - конфиг по полочкам
