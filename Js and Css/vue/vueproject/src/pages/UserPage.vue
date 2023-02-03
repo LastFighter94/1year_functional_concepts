@@ -4,6 +4,7 @@
         <my-input
             v-model="searchQuery"
             placeholder="Поиск..."
+            v-focus
         />
         <div class="app__btns">
             <my-button
@@ -30,7 +31,8 @@
             v-if="!isPostsLoading"
         />
         <div v-else>Идет загрузка...</div>
-        <div ref="observer" class="observer"></div>
+        <!-- <div ref="observer" class="observer"></div> -->
+        <div v-intersection="loadMorePosts" class="observer"></div>
 
         <!-- <post-list v-bind:posts="posts"/> -->
 
@@ -138,20 +140,22 @@ export default {
     },
     mounted(){
             this.fetchPosts()
-            const options = {
-                // root: document.querySelector('#scrollArea'),
-                rootMargin: '0px',
-                threshold: 1.0
-            }
-            // используем стрелочную функцию, так как потеряли контекст this компонента
-            const callback = (entries, observer) => {
-                if (entries[0].isIntersecting && this.page < this.totalPages){
-                    this.loadMorePosts()
-                    console.log('load more posts')
-                }
-            }
-            const observer = new IntersectionObserver(callback, options)
-            observer.observe(this.$refs.observer)
+
+            // // этот код отвечает за отслеживание пересечение какого-либо объекта 
+            // const options = {
+            //     // root: document.querySelector('#scrollArea'),
+            //     rootMargin: '0px',
+            //     threshold: 1.0
+            // }
+            // // используем стрелочную функцию, так как потеряли контекст this компонента
+            // const callback = (entries, observer) => {
+            //     if (entries[0].isIntersecting && this.page < this.totalPages){
+            //         this.loadMorePosts()
+            //         console.log('load more posts')
+            //     }
+            // }
+            // const observer = new IntersectionObserver(callback, options)
+            // observer.observe(this.$refs.observer) // здесь мы указываем что наблюдаем за каким-то референсом
     },
     computed: {
         sortedPosts(){
