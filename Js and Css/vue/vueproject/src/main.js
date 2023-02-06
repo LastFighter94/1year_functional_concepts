@@ -3,7 +3,7 @@ import App from './App'
 import components from '@/components/UI' // здесь импортируем массив из UI/index.js
 import directives from '@/directives' // здесь импортируем массив из directives/index.js
 import router from '@/router/router'
-import Vintersection from '@/directives/Vintersection'
+import store from '@/store'
 
 const app = createApp(App)
 
@@ -19,4 +19,5 @@ directives.forEach(directive => {
 
 app
     .use(router)
+    .use(store)
     .mount('#app')
