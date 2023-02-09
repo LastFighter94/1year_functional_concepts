@@ -1,0 +1,103 @@
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9gCtAuEdXTjNVE5bbMFo5OD - плэйлист
+
+разница с версией без TS
+
+появился tsconfig - конфигурация для TS compiler
+
+в скрипте указываем lang
+
+<script lang="ts">
+
+для создания компонента мы используем функцию defineComponent
+
+shims-vue.d.ts - this is a file which tells TS all about vue files,
+so it can better understand single file components
+
+
+
+type assertion
+
+  data() {
+    return {
+      name: 'Link',
+      age: 25 as number | string // речь об этой строчке
+    }
+  },
+
+#################################################################################
+
+возвращаем state из setup через spread operator превращая объект в refs
+либо возвращаем refs - name, age
+
+<script lang="ts">
+import { defineComponent, reactive, toRefs } from 'vue';
+
+export default defineComponent({
+  name: 'App',
+  components: {},
+  setup(){
+    // const state = reactive({
+    //   name: 'Link',
+    //   age: 25 as string | number
+    // })
+
+    // state.name = 'misha' 
+
+    // return { ...toRefs(state) }
+
+    const name = ref('link')
+    const age = ref<number | string>(25) // we use generic argument instead of type assertion
+    // ref(value) returns a reference obkect not an actual value
+    
+    // age.value = 30
+
+    return { name, age}
+  },
+  // data() {
+  //   return {
+  //     name: 'Link',
+  //     age: 25 as number | string
+  //   }
+  // },
+  methods: {
+    changeName(name: string){
+      this.name = name
+      return name
+    },
+    changeAge(age: number | string){
+      this.age = age
+      return age
+    }
+  }
+});
+</script>
+
+#################################################################################
+
+define props with vue and TS
+
+<template>
+    <div class="job-list">
+        <ul>
+            <li v-for="job in jobs" :key="job.id"></li>
+        </ul>
+    </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, PropType } from 'vue';
+import Job from '@/types/job'
+
+export default defineComponent ({
+    props: {
+        jobs: {
+            required: true,
+            type: Array as PropType<Job[]>
+        }
+    }
+})
+</script>
+
+<style scoped>
+
+</style>

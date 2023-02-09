@@ -1,0 +1,24 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "welcome to paradise",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dignissimos ipsa sed nisi fugit velit reprehenderit consequuntur iusto culpa blanditiis.",
+            "tags": [
+                "webdev",
+                "coding",
+                "news"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "top 53 css tips",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dignissimos ipsa sed nisi fugit velit reprehenderit consequuntur iusto culpa blanditiis.",
+            "tags": [
+                "webdev",
+                "css",
+                "coding"
+            ]
+        }
+    ]
+}
