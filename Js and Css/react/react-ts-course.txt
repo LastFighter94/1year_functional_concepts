@@ -1,0 +1,69 @@
+https://www.youtube.com/watch?v=92qcfeWxtnY
+
+npx create-react-app . --template typescript
+
+APP
+
+import React from 'react';
+import Card, {CardVariant} from "./components/Card";
+
+const App = () => {
+    return (
+        <div>
+          <Card onClick={(num) => console.log('test', num)} variant={CardVariant.outlined} width='200px' height='200px'>
+              <button>test</button>
+          </Card>
+        </div>
+    );
+};
+
+export default App;
+
+CARD
+
+import React, {FC, PropsWithChildren, useState} from 'react';
+
+export enum CardVariant {
+    outlined='outlined',
+    primary='primary'
+}
+
+interface CardProps {
+    width: string;
+    height?: string;
+    variant: CardVariant;
+    onClick: (num: number) => void;
+}
+
+const Card: FC<PropsWithChildren<CardProps>> =
+    ({
+         width,
+         height,
+         variant,
+         onClick,
+         children
+    }) => {
+
+    const [state, setState] = useState(0)
+
+    return (
+        <div style={{width, height,
+            border: variant === CardVariant.outlined ? '1px solid gray' : 'none',
+            background: variant === CardVariant.primary ? 'lightgray' : ''
+        }}
+            onClick={() => onClick(state)}
+        >
+            {children}
+        </div>
+    );
+};
+
+export default Card;
+
+Сделали компонент card и для его props описали interface где указывается
+Какого типа должен быть каждый props, также мы пометили что сама карточка
+Является типа FC - function component и как generic она принимает CardProps
+
+######################################################
+
+npm i react-router-dom @types/react-router-dom
