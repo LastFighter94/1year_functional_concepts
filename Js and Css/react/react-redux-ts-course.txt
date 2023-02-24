@@ -1,0 +1,13 @@
+https://www.youtube.com/watch?v=ETWABFYv0GM&t=1s
+
+npx create-react-app . --template typescript
+
+###
+
+Npm I @types/react-redux - типы react redux
+Redux сам redux
+React-redux чтобы связать react с redux
+React-thunk для асинхронных actions
+Axios
+
+npm i @types/react-redux redux react-redux redux-thunk axios 

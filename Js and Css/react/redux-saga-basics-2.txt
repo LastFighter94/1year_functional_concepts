@@ -1,0 +1,139 @@
+https://www.youtube.com/watch?v=GLzthfaWJkM&list=PLNkWIWHIRwMFrVMaVMOYflo8R4QBk4vk0&index=3
+(Начало по react-saga только на 3 месте playlist)
+
+Playlist
+
+npx create-react-app .
+
+npm i redux react-redux
+npm i redux-saga
+
+########################################################################
+
+(https://www.youtube.com/watch?v=PPnB8A2gfLM&list=PLNkWIWHIRwMFrVMaVMOYflo8R4QBk4vk0&index=5)
+Take
+
+Take это блокирующий эффект, который следит за action-ом
+И разблокирует вызов следующих потоков, в случае если вызов этого action произойдет
+
+import { take } from 'redux-saga/effects';
+import { INCREASE_COUNT, DECREASE_COUNT } from '../constants';
+
+export function* workerSaga() {
+
+}
+
+export function* watchClickSaga() {
+    yield take(INCREASE_COUNT);
+    console.log('request 1');
+    yield take(DECREASE_COUNT);
+    console.log('request 2');
+}
+
+export default function* rootSaga() {
+    yield watchClickSaga();
+}
+
+Здесь речь идет о console.log('request 1') только после вызова INCREASE_COUNT
+
+########################################################################
+
+
+Для того чтобы выполнять многократные вызовы side effects (действий) при срабатывании определенного action-a
+Существует эффект takeEvery
+
+takeEvery принимает два аргумента
+1 - action, который он будет слушать
+2 - callback вызов, который будет осуществляться при action-е
+
+########################################################################
+
+https://www.youtube.com/watch?v=Tz0G2Obdycc&list=PLNkWIWHIRwMFrVMaVMOYflo8R4QBk4vk0&index=6
+Подробнее об этих эффектах
+
+takeLatest - осуществляет вызов только последней переданной функции
+
+takeLeading - вызывает лишь первую сагу, автоматически отменив вызовы всех последующих,
+Если первая еще находится в процессе выполнения 
+
+Select - помогает удобно работать со store и получать из него нужные данные прямо в саге
+В качестве аргумента select принимает функцию в которую передается state 
+
+########################################################################
+
+Для различных асинхронных действий в саге есть отдельный эффект - call
+
+Call является блокирующим эффектом и выполняет переданную в него функцию
+И если функция возвращает промис, то есть по сути является асинхронной, то
+Эффект call приостанавливает сагу до тех пор пока просим не вернет resolve 
+
+########################################################################
+
+https://www.youtube.com/watch?v=LiEAhXFA8CI&list=PLNkWIWHIRwMFrVMaVMOYflo8R4QBk4vk0&index=9
+Подробнее
+
+В Саге есть два основных типа эффектов: блокирующие и неблокирующие
+
+Call блокирующий эффект (как и take) - call блокирует дальнейшее исполнение саги до тех пор
+Пока переданная в него асинхронная функция не зарезвиться
+
+export function* handleNews() {
+    yield call(handleLatestNews);
+    yield call(handlePopularNews);
+}
+
+Fork - для параллельных запросов подойдет (дает полную независимость параллельным запросам)
+
+export function* handleNews() {
+    yield fork(handleLatestNews);
+    yield fork(handlePopularNews);
+}
+
+All, race - тоже параллельные эффекты, аналоги promise all, promise race
+
+export function* handleNews() {
+Yield all ([
+    call(handleLatestNews),
+    call(handlePopularNews)
+)]
+}
+
+All - выполняет параллельно, но возвращает результат когда возвращаются оба запроса, но если
+Хотя бы один запрос упадет, то call не вернет вообще ничего и наш store останется пустым
+
+export function* handleNews() {
+Yield race ([
+    call(handleLatestNews),
+    call(handlePopularNews)
+)]
+}
+
+Возвращает результат который выполняется быстрее, то есть вверху выполниться только один call
+
+########################################################################
+
+При падении одной саги все остальные саги тоже падают
+
+Однако предположим что мы хотим сделать полностью независимую задачу, которая не будет зависеть от родителя
+И будет продолжать выполняться, даже если другая дочерняя сага упадет: для этого есть отдельный эффект,
+Который называется spawn
+
+Spawn - создает параллельную задачу в корне саги, и ее использование не привязано к родителю
+(Деблокирующий эффект)
+
+########################################################################
+
+Способы отлавливали ошибок
+1 - try, catch
+
+export function* handleLatestNews() {
+    try {
+        throw new Error()
+        const { hits } = yield call(getLatestNews, 'react');
+        yield put(setLatestNews(hits));
+    } catch {
+        throw new Error('Error fetching latest news')
+    }
+}
+
+2 - мы можем на ошибку вызвать отдельный action и записывать информацию о падающем запросе в store

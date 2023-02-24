@@ -1,0 +1,44 @@
+https://www.youtube.com/watch?v=ylhHYtTyVGE&list=PL6DxKON1uLOHsBCJ_vVuvRsW84VnqmPp6&index=6
+
+Play-list
+
+В redux-saga есть три остовых понятия:
+
+Workers,
+Watchers,
+Effects
+
+Весь redux-saga построен вокруг генераторов (эта функция, помеченная * звездочкой)
+
+Worker - это функция, внутри которой выполняется какая-то асинхронная логика
+
+Watcher - это функция генератор, в которой с помощью специальных функций мы указываем тип action-a и worker, который будет отрабатывать, когда action с таким типом, который мы указали будет отрабатывать
+
+- это функция наблюдатель, которая сидит и ждет пока отработает тот или иной action
+Если к этому action-у привязан какой-то worker, то есть простая асинхронная функция, watcher эту функция вызывает
+
+Effects - это набор встроенных в redux-saga функций, которые помогают делать запросы, делать dispatch, следить за worker-ами и так далее.
+
+npm i redux react-redux
+npm i redux-saga
+
+###############################################################
+
+1 - создаем middleWare, без этого работать не будет
+запускаем его, передаем параметром туда watcher (можно глобальный watcher,
+Который объединяет два других watcher-a),
+Watcher у нас следит за конкретным action-om, который мы вызываем через dispatch,
+
+При вызове dispatch - action-a у нас отрабатывает watcher и он уже вызывает worker
+
+Effects
+
+Put - аналог dispatch для асинхронных actions
+
+export function* countWatcher(){
+    yield takeEvery(ASYNC_INCREMENT, incrementWorker)
+    yield takeEvery(ASYNC_DECREMENT, decrementWorker)
+    // takeEvery первым параметром принимает тип action за которым необходимо следить,
+    // вторым параметром worker - который должен отрабатывать, когда action с таким типом,
+    // который мы передали первым параметром, будем "задиспатчен"
+}
