@@ -1,0 +1,78 @@
+V-on:submit.prevent="onSubmit"
+
+V-on = name: starts with v, можно использовать shorthand @
+:submit = argument
+.prevent = modifier
+"onSubmit" = value (interpreted a JS expression)
+
+https://vuejs.org/guide/reusability/custom-directives.html
+
+директивы начинаются с буквы v
+
+директивы во vue - это переиспользуемый функционал
+
+- директива представляет собой обычный объект, который строиться особым образом
+
+vue позволяет создавать собственные директивы на подобии v-model, v-show
+
+у каждой директивы есть свой жизненный цикл на подобии жизненного цикла компонента
+
+
+
+
+
+--- 
+
+вначале создаем директиву (файл с названием типа VdirectiveName.js)
+
+пишем внутри нее 
+
+export default {
+	...
+}
+
+потом в файле main.js импортируем саму директиву
+import Vintersection from '@/directives/Vintersection'
+
+и глобально ее регистрируем с помощью метода directive
+app.directive('intersection', Vintersection)
+в параметрах название и сама директива
+
+
+
+так мы вставляем директиву
+
+<div v-intersection="{key: 'value'}" class="observer"></div> // так мы вызвали директиву
+
+export default {
+    mounted(el, binding){
+        console.log(el, binding) // выведет DOM элемент и объект внутри v-intersection
+	// console.log(binding.value) выведет {key: 'value'}
+	// {key: 'value'} вместо этого можно передать функцию!
+    }
+}
+
+помимо самого элемента функция mouted принимает некоторый объект binding
+
+# ---
+
+у нас в приложении пользовательских директив может быть несколько, поэтоум регистрировать их по одной
+не желательно, поэтому делаем тоже самое что делали с библиотекой глобальных компонентов
+
+в папке с директивами создаем файл, внутри него делаем импорт директив и их экспорт
+import VFocus from "./VFocus";
+import Vintersection from "./Vintersection";
+
+export default [
+    VFocus,
+    Vintersection
+]
+
+далее в main импортируем этот файл как 
+import file_name from 'path' (index.js тянется как модуль)
+
+и бежим по нему с forEach
+
+directives.forEach(directive => {
+    app.directive(directive.name, directive)
+})

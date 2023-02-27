@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=ElaIKk8ba5g&list=PL6DxKON1uLOHya4bDIynPTCwZHrezUlFs&index=10
+
+npx create-react-app . --template typescript
+
+npm i axios react-router-dom @types/react-router-dom moment
+
+npm i redux redux-thunk react-redux antd @types/react-redux @types/redux-thunk
+
+До 1 hour 12 minutes 12 seconds - дальше ошибочка

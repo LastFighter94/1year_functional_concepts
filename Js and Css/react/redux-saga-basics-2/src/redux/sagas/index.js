@@ -22,8 +22,12 @@ export function* handlePopularNews() {
 }
 
 export function* handleNews() {
-    yield spawn(handleLatestNews);
-    yield spawn(handlePopularNews);
+    // yield spawn(handleLatestNews);
+    // yield spawn(handlePopularNews);
+
+    // можно использовать - так как есть обработчик ошибок
+    yield fork(handleLatestNews);
+    yield fork(handlePopularNews);
 }
 
 export function* watchClickSaga() {

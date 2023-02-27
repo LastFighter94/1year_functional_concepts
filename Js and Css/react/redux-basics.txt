@@ -3,6 +3,8 @@ https://www.youtube.com/watch?v=5Qtqzeh5FeM&list=PL6DxKON1uLOHsBCJ_vVuvRsW84Vnqm
 Playlist
 
 npm i redux react-redux
+npm i redux-thunk
+npm i redux-devtools-extension
 
 После того как модули установились необходимо создать store
 

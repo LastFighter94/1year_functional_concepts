@@ -1,0 +1,15 @@
+https://www.youtube.com/watch?v=cFWpwtkto1s&list=PL6DxKON1uLOEmw7Jkl_0Ac6wJ-jOjpKrQ&index=1
+
+https://redux-toolkit.js.org/ - official documentation
+
+npm install @reduxjs/toolkit
+
+Если мы устанавливаем toolkit - отдельно устанавливать redux нам не нужно
+
+toolkitRedux/index.js
+
+Работа с devtools и thunk уже подключена, как и middleware: это экономит время
+
+###
+
+Slice - это тот же reducer только немного в другой обертке

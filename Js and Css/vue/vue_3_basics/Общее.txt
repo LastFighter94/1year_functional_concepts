@@ -1,6 +1,0 @@
-https://vuejs.org/api/application.html - VUE API
-https://vuejs.org/examples/#hello-world - функционал по верхам
-
-https://vueschool.io/courses - хорошее платное инфо
-
-https://vuejs.org/style-guide/ - style guide

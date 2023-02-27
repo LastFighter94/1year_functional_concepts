@@ -1,0 +1,260 @@
+https://github.com/iamshaunjp/react-router-in-depth
+
+npm i
+
+https://www.youtube.com/watch?v=OMQ2QARHPo0&list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf&index=1
+
+####################################
+
+npm install react-router-dom@6.4
+
+####################################
+
+Старый синтаксис 
+
+PS: NavLink вместо Link, так как у NavLink автоматически есть класс active
+
+    // <BrowserRouter>
+    //     <header>
+    //         <nav>
+    //             <h1>Jobarouter</h1>
+    //             <NavLink to="/">Home</NavLink>
+    //             <NavLink to="about">About</NavLink>
+    //         </nav>
+    //     </header>
+    //     <main>
+    //         <Routes>
+    //             <Route index element={<Home />} /> // index === path="/"
+    //             <Route path="about" element={<About />} />
+    //         </Routes>
+    //     </main>
+    // </BrowserRouter>
+
+/* navbar */
+header nav {
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header nav h1 {
+  margin-right: auto;
+  border-bottom: 3px solid var(--primary);
+}
+header nav a{
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+header nav a.active {
+  background: var(--primary);
+}
+
+####################################
+
+Новый синтаксис 
+
+заключается в том что мы создаем функцию createBrowserRouter в Мекк кладем
+createRoutesFromElements функцию и внутри уже кладем RootLayout внутрь root пути 
+
+Потом оборачиваем наше приложение в RouteProvider
+
+const router = createBrowserRouter(
+    createRoutesFromElements(
+        <Route path="/" element={<RootLayout/>}>
+            <Route index element={<Home/>}/>
+            <Route path="about" element={<About/>}/>
+        </Route>
+    )
+)
+
+function App() {
+  return (
+    <RouterProvider router={router}/>
+  );
+}
+
+export default App
+
+
+В компоненте RootLayout мы уже задаем отображение компонентов, которые входят в список путей роста
+
+import React from 'react';
+import {NavLink, Outlet} from "react-router-dom";
+
+const RootLayout = () => {
+    return (
+        <div className="root-layout">
+            <header>
+                <nav>
+                    <h1>Jobarouter</h1>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="about">About</NavLink>
+                </nav>
+            </header> // а это аналог навбара
+
+            <main>
+                <Outlet/> // - здесь вывод компонентов
+            </main>
+        </div>
+    );
+};
+
+export default RootLayout;
+
+####################################
+
+Loaders = new thing in version up 6
+
+- can load data in component before it renders
+
+json-server -p 4000 -w ./data/db.json
+
+(-p port; -w watch)
+
+Пример компонента с использованием
+
+import { Link, useLoaderData } from "react-router-dom"
+
+export default function Careers() {
+    const careers = useLoaderData()
+
+    return (
+        <div className="careers">
+            {careers.map(career => (
+                <Link to='/' key={career.id}>
+                    <p>{career.title}</p>
+                    <p>Based in {career.location}</p>
+                </Link>
+            ))}
+        </div>
+    )
+}
+
+// data loader - необязательно хранить его здесь
+export const careersLoader = async () => {
+    const res = await fetch('http://localhost:4000/careers')
+
+    return res.json()
+}
+
+Главный компонент
+
+            <Route path="careers" element={<CareersLayout/>}>
+                <Route
+                    index
+                    element={<Careers/>}
+                    loader={careersLoader} // сам лоадер (мы его экспортировали из любого места)
+                />
+            </Route>
+
+####################################
+
+Parameters
+
+Можем пробрасывать params через loaders если в пути есть :id например
+
+                <Route
+                    path=":id"
+                    element={<CareerDetails/>}
+                    loader={careerDetailsLoader}
+                />
+
+export const careerDetailsLoader = async ({params}) => {
+    const { id } = params
+    // const id = params.id
+
+    const res = await fetch('http://localhost:4000/careers/' + id)
+
+    if (!res.ok){
+        throw Error('Could not find that career')
+    }
+
+    return res.json()
+}
+
+####################################
+
+Error Elements
+
+https://www.youtube.com/watch?v=n0Rvia8w7p0&list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf&index=8
+
+            <Route
+                path="careers"
+                element={<CareersLayout/>} // сразу все пути обрабатываем
+                errorElement={<CareersError/>}
+            >
+                <Route
+                    index
+                    element={<Careers/>}
+                    loader={careersLoader}
+                    // errorElement={<CareersError/>}
+                />
+                <Route
+                    path=":id"
+                    element={<CareerDetails/>}
+                    loader={careerDetailsLoader}
+                    // errorElement={<CareersError/>} 
+                />
+            </Route>
+
+1 - если есть ошибка в index || :id === if we throw an error in some of those or in both of those components
+
+Than - take the error an inject it in CareersError component
+
+const CareersError = () => {
+    const error = useRouteError()
+
+    return (
+        <div className="careers-error">
+            <h2>Error</h2>
+            <p>{error.message}</p>
+            <Link to="/">Back to homepage</Link>
+        </div>
+    );
+};
+
+*** when we bubble up to the parent instead of showing layout component we show error component!
+
+####################################
+
+Breadcrumbs
+
+    const location = useLocation()
+
+    // /help/contact --> hel[ | contact
+
+    let currentLink = ''
+
+    const crumbs = location.pathname.split('/')
+        .filter((crumb => crumb !== ''))
+        .map(crumb => {
+            currentLink += `/${crumb}`
+
+            return (
+                <div className="crumb" key={crumb}>
+                    <Link to={currentLink}>{crumb}</Link>
+                </div>
+            )
+        })
+
+####################################
+
+Forms & actions
+
+            <Form
+                method="post"
+                action="/help/contact" // find the action which is associated with this route
+            >
+
+Action is going to fire when the form is submitted
+
+
+
+export const contactAction = async ({ request }) => {
+    
+}
+
+Request property contains all of the form data (to make it work you need to specify "name" attributes
+In html template where inputs e.t.c)

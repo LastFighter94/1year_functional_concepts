@@ -1,0 +1,10 @@
+1) npm install -g vue/cli
+2) vue create .
+babel
+vue 3
+router
+vuex
+- history mode YES
+3) npm run serve
+4) vue devtools (beta - для vue3 версии)
+5) npm i axios
