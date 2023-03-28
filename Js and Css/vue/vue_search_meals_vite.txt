@@ -1,0 +1,17 @@
+https://www.youtube.com/watch?v=cfiN8lCA3RM&t=7320s
+
+npm create vite@latest
+type project_name choose vue, js
+cd project_name 
+npm i 
+npm run dev
+
+https://tailwindcss.com/docs/guides/vite#vue - config
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm install vue-router@4
+npm install vuex@4 -S
+npm install -D @tailwindcss/forms
+https://github.com/tailwindlabs/tailwindcss-forms - config
+
+npm i axios

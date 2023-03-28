@@ -185,7 +185,7 @@ export default {
 
 ####################################################################################
 
-refs vs reactive
+refs vs reactive (reactive - не может принимать примитивное значение)
 
 <template>
   <div class="home">
@@ -337,41 +337,5 @@ export default {
 props
 
 мы передаем пропсы также как и раньше, но если мы хотим как-то с ними взаимодействовать
-то в setup() мы указываем setup(props) а потом образаемся к этим props через
+то в setup() мы указываем setup(props) а потом обращаемся к этим props через
 props.name_of_the_prop и так далее
-
-lifecicle hooks
-
-<template>
-  <div class="home">
-    <h1>Home</h1>
-    <PostList v-if="showPosts" :posts="posts"/>
-    <button @click="showPosts = !showPosts">toggle posts</button>
-    <button @click="posts.pop()">delete a post</button>
-  </div>
-</template>
-
-<script>
-import PostList from '@/components/PostList.vue'
-import { ref } from 'vue'
-
-export default {
-  name: 'HomeView',
-  components: {
-    PostList
-  },
-  setup(){
-    const posts = ref([
-      { title: 'welcome to the blog', body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore incidunt libero doloremque iusto ad, molestiae reiciendis sapiente. Maiores excepturi, assumenda accusamus fugiat officia placeat maxime reiciendis facilis provident ea consectetur modi ad nemo pariatur sunt doloribus saepe. Molestias voluptate repudiandae aliquam porro architecto labore nobis doloremque distinctio dicta velit tempore officia cumque eligendi, est necessitatibus eos fugiat nemo assumenda! Quos, ea odit! Sequi velit placeat dicta molestiae, voluptas at minus facere voluptatem optio molestias libero in suscipit ratione, esse quas, beatae sint non explicabo officia. Voluptatibus maxime recusandae consectetur nostrum praesentium, eaque ducimus similique repudiandae, ut aspernatur ratione iusto odio!', id: 1},
-      { title: 'top 5 css tips', body: 'lorem ipsum', id: 2}
-    ])
-
-    const showPosts = ref(true)
-
-    return { posts, showPosts }
-  },
-  mounted(){
-    console.log('mounted using options API')
-  }
-}
-</script>

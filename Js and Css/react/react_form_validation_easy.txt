@@ -1,0 +1,11 @@
+https://www.youtube.com/watch?v=brcHK3P6ChQ&list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd&index=1
+
+npm create vite@latest
+
+npm run dev
+
+https://fontawesome.com/v5/docs/web/use-with/react
+
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome

@@ -71,8 +71,8 @@ export default {
             setSelectedSort: 'post/setSelectedSort',
         }),
         ...mapActions({
-           loadMorePosts: 'post/loadMorePosts', 
-           fetchPosts: 'post/fetchPosts', 
+           loadMorePosts: 'post/loadMorePosts',
+           fetchPosts: 'post/fetchPosts',
         }),
         createPost(post){
             this.posts.push(post)
@@ -102,7 +102,12 @@ export default {
         ...mapGetters({
             sortedPosts: 'post/sortedPosts',
             sortedAndSearchedPosts: 'post/sortedAndSearchedPosts'
-        })
+        }),
+        // ...mapGetters({
+        //   sortedPosts: ('post', {
+        //     sortedPosts: 'sortedPosts'
+        //   })
+        // })
     },
     watch: {
 

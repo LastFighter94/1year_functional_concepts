@@ -1,0 +1,3 @@
+https://github.com/vuejs/vuex/tree/3.x/examples/shopping-cart
+
+https://vueschool.io/courses - объяснение (vuex курс)

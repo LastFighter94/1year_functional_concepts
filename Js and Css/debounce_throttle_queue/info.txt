@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=PQTb8cBpmE8
+
+https://uproger.com/rasshirennye-funkczii-javascript/ - throttle более простая реализация
+
+https://www.youtube.com/watch?v=VNNLNC5h7ZI&list=PL6DxKON1uLOFJ5_dDcX7G1osKnsBlCaaT&index=16
+Throttle && debounce in React

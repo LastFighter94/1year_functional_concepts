@@ -1,0 +1,39 @@
+https://www.youtube.com/watch?v=XxXyfkrP298&list=PL6QREj8te1P6wX9m5KnicnDVEucbOPsqR&index=2&t=1s
+
+https://www.youtube.com/watch?v=bDVAQZVeebw&t=3s - sanity crash course
+
+1) npm install -g @sanity/cli - устанавливаем sanity глобально
+(На маке необходимо будет добавить sudo для команды)
+
+2) npm create sanity@latest в папке где будем хранить бэк пишем эту команду
+Заходим через GitHub или Google
+
+- Default preset = yes (Или Select dataset to use production - если случайно случайно завершился процесс)
+- Select project template = Clean project with no predefined schemas
+- Do you want to use TypeScript? = Yes
+
+Изменения только в папке schemas
+
+npm run dev
+
+sanity manage
+
+#########
+
+https://tailwindcss.com/docs/guides/create-react-app
+
+npm i @sanity/client @sanity/image-url react-icons react-loader-spinner react-masonry-css react-router-dom uuid
+
+// npm install react-google-login --legacy-peer-deps
+// здесь возникают сложности - сделал заглушку
+
+sanity manage (terminal)
+API раздел
+Cors
+http://localhost:3000
+http://localhost:3000
+Tokens
+Add token with @Editor settings
+
+REACT_APP_SANITY_PROJECT_ID = n3e4xle1
+REACT_APP_SANITY_TOKEN = skfx0j69hGQvki2XjafvdX6PQUnleCVWyToIiuyleFntusaeYzwX6usYDNaOCul5PQZ6bARLx8WnNH4RLFuF9kQDxG79YcbJxqS84lcFDSGZD9kUVttqikeqerKVBpa8YZRTpv5sX1pcnYS06pWrnnSVHNgi8tsvdg3rgbPgzgZxZuLTQNLX
