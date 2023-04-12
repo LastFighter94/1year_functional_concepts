@@ -1,0 +1,22 @@
+https://www.youtube.com/watch?v=y2emL1fMRyY
+
+1) first_practise --> jest-unit
+
+npm init -y
+
+npm i -D jest (устанавливаем jest как dev зависимость, потому что в production он нам не нужен)
+
+"test": "echo \"Error: no test specified\" && exit 1"
+В package вместо строчки выше ставим 
+"test": "jest"
+
+При команде npm run test - jest по определенному паттерну находим все наши тестовые файлики,
+И выполняет их
+
+Если нужно запустить какой-то конкретный тестовый файл, то делаем так
+npm run test nameOfUnitTest.test.js 
+
+2) react-testing-libriry-example 
+
+npx create-react-app my-app
+
