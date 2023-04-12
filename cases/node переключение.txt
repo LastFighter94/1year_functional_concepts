@@ -1,0 +1,42 @@
+brew link node@14
+
+echo 'export PATH="/opt/homebrew/opt/node@18/bin:$PATH"' >> ~/.zshrc
+
+(Также есть - unlink)
+
+
+
+# Install NVM with homebrew.
+$ brew install nvm
+
+# Create system directory for nvm.
+$ mkdir ~/.nvm
+
+# Add the following to your ~/.bash_profile.
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# Read and execute your updated ~/.bash_profile.
+$ source ~/.bash_profile
+
+# Verify nvm is installed
+$ nvm --version
+
+***
+# Check all available remote versions.
+$ nvm ls-remote
+
+# Install specific version.
+$ nvm install 16.14.2
+
+# Check locally installed versions.
+$ nvm ls
+
+# Use specific version.
+$ nvm use 16.14.2
+***
+# Set specific version to be default.
+nvm alias default 16
+
+# Switch to default version on environment.
+$ nvm use default
