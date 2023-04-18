@@ -1,0 +1,16 @@
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9g0MQZfHwKcuB0Yswgb3gA5
+
+https://vuetifyjs.com/en/components/all/ - documentation
+
+- vue create projectName
+Router
+Use-history mode - yes
+Babel - yes
+
+vue add vuetify
+(Default preset)
+--> так появляется папка plugins 
+
+V-app Root Vuetify component - все остальные vuetify компоненты nested внутри него
+
+V-content - все содержимое складываем между этими "тегами" (тот же router-view)
