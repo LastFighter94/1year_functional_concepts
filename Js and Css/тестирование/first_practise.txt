@@ -20,3 +20,9 @@ npm run test nameOfUnitTest.test.js
 
 npx create-react-app my-app
 
+
+app.test.js - 
+
+Npm run test
+
+На моменте users.test.js все встало

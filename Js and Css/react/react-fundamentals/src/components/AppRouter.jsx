@@ -8,7 +8,7 @@ import PostIdPage from "../pages/PostIdPage";
 import Login from "../pages/Login";
 
 const AppRouter = () => {
-    const isAuth = false;
+    const isAuth = true;
 
     return (
         <div>

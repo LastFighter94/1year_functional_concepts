@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios'
 
+jest.mock('axios')
+
 const Users = () => {
     const [users, setUsers] = useState([])
 

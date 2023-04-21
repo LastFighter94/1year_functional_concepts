@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=ML5egqL3YFE
+
+npx create-react-app .
+
+npm i --save-dev @testing-library/react react-test-renderer
+// одна либа у нас уже есть изначально, но мы ее в dev dependencies переносим

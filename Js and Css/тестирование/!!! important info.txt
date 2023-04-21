@@ -1,0 +1,23 @@
+Wallaby	extension for viscose or web storm - ! - работа с тестами будет намного продуктивнее (на будущее)
+
+Useful docs links
+
+https://jestjs.io/docs/expect
+https://testing-library.com/docs/queries/byrole
+
+
+
+To test out applications - we have to reach our DOM elements first
+- and to reach those elements we are using Testing Library
+
+And also we can interact with our DOM elements = event e.t.c
+
+А чтобы определить - прошел ли тест или нет - нам уже нужен jest
+
+
+
+https://stackoverflow.com/questions/2665812/what-is-mocking?noredirect=1&lq=1
+
+Mocking is primarily used in unit testing. An object under test may have dependencies on other (complex) objects. To isolate the behaviour of the object you want to test you replace the other objects by mocks that simulate the behaviour of the real objects. This is useful if the real objects are impractical to incorporate into the unit test.
+
+In short, mocking is creating objects that simulate the behaviour of real objects.
