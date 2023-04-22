@@ -2,6 +2,9 @@ python -m venv tg_prime_learn
 tg_prime_learn\Scripts\activate.bat
 
 pip install ipython
+
+(Настройки i-python в setup-files на винте)
+
 python -m pip install --upgrade pip
 
 pip install gevent
