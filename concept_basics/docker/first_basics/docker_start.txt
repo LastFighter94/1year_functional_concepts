@@ -1,0 +1,102 @@
+https://www.youtube.com/watch?v=EXHxkwDm7c0&list=PL0lO_mIqDDFX1c0JHogP5YuZdOVawoepS&index=2
+
+image - образ - на основе него работает сам контейнер
+
+docker ps (all containers)
+docker images -all (all images
+
+docker run -d -p 80:80 docker/getting-started
+Через docker делаем команду run - запускаем контейнер (некий проект), 
+а если его нет на локалке, то эта команда его скачивает, а потом запускает
+
+-d (в совокупности с run -d - detach, фоновый режим контейнера)
+-p (в совокупности с run -p - publish a container's port(s) to the host)
+
+docker - list all docker commands
+
+docker run --help (или какая-либо другая команда)
+
+docker ps = list all containers
+
+docker info = информация о докере
+
+docker image prune -a = delete all images without at least one container associated to them
+
+Разница между docker images и docker containers
+https://wiki.merionet.ru/servernye-resheniya/99/docker-obraz-i-docker-kontejner-v-chem-raznica/
+
+docker stop (id container) - stop the container
+docker stop (id container) - start the container
+docker pause (id container)
+docker unpause (id container)
+docker restart  (id container)
+
+docker login
+docker logout
+
+#3-4 lesson
+
+docker pull (image-name) - список образов есть в docker hub
+Также можно указать версию образа 
+- docker pull iamgeName:latest (default)
+- docker pull imageName:<version>
+
+docker run openjdk
+
+Запустить образ без контейнера нереально, поэтому если его нет, а образ есть, то контейнер создается автоматически
+При этом если запускать образ (а не контейнер) - то всегда будет создаваться новый контейнер
+
+docker run -it --name MyJava openjdk 
+Интерактивный запуск контейнера
+
+Ctrl + d = exit
+
+Теперь не надо постоянно новый контейнер из образа делать, просто запускаем контейнер docker start MyJava
+
+Чтобы удалить какой-либо образ пишем следующую команду
+docker image rm imageId
+
+In directory where Dockerfile is
+docker build .
+
+docker image rm imageId
+
+LESSON 5
+
+php % docker build -t my-php-app .
+Flag -t делает название image
+
+docker run -p 8001:80 -d my-php-app
+
+docker-compose -->
+
+docker-compose build
+docker-compose up
+
+
+
+https://www.youtube.com/watch?v=k6tDraepW24&list=PL0lO_mIqDDFX1c0JHogP5YuZdOVawoepS&index=6
+- DEPLOY CONTAINER to HUB
+
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+
+The key difference between the Dockerfile and docker-compose is that 
+
+the Dockerfile describes how to build Docker images, - можно описать лишь один образ, который вы подключаете,
+А также можно описать настройки этого образа
+
+while docker-compose is used to run Docker containers.
+- можно описать множество различных образов, и настройки ко всем этим образам
+
+*****************************************************************
+*****************************************************************
+
+Как запустить программу через определенный image в docker (примерна 6 питонах, которые не надо устанавливать)
+https://www.youtube.com/watch?v=rfG5EnjLKe0
+
+Команды Docker для работы с образами
+https://1cloud.ru/help/docker/docker_image_work
+
