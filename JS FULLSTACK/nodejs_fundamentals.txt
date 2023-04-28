@@ -1,0 +1,35 @@
+https://www.youtube.com/watch?v=243pQXC5Ebs&list=PL6DxKON1uLOEz4NoMVXoHXixotxo2CEDO&index=12
+
+npm init -y
+npm init
+
+npm i express
+npm i --save-dev nodemon
+
+ТЕОРИЯ:
+
+Нода - это программная платформа, с помощью специальных инструментов она позволяет превратить js код в машинный код (однопоточный)
+
+V8 - C++ написан на
+Libuv написан на C
+
+Небблокирующий ввод/вывод работает благодаря демультиплексору событий
+
+Нода - неблокирующий ввод/вывод
+Nginx - неблокирующий ввод/вывод
+Apache - классический многопоточный веб-сервер
+
+JS - однопоточный язык, где асинхронный код осуществляется с помощью event-loop
+
+npm i cross-env (пакет для того чтобы задавать переменные окружения)
+"start": "cross-env PORT=5000 node ./lessons/process.js" - package.json
+
+npm i dotenv (.env файл считывает)
+
+######path.js
+
+... 
+
+npm i mongoose
+
+Mongodb.com - не получается авторизироваться

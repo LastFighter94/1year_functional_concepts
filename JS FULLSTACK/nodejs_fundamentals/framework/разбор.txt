@@ -1,0 +1,64 @@
+index.js
+
+- Задали порт, и импортировали модули в index.js;
+- Инициализировали класс из модуля Application.js - и присвоили его переменной app;
+- Добавили middleware функцию в конструктор класса Application;
+- Добавили router в класс Application;
+- Start listening to web server;
+
+Структура router - создается внутри Router.js по оберточным методам get, post, put, delete - через основной метод request
+
+// endpoints = {
+//     '/user': {
+//         'GET': handler1,
+//         'POST': handler2,
+//         'DELETE': handler3,
+//     }
+// }
+
+Логика структуры - обращаясь к endpoint "/users" - мы также можем указать метод (handler), который выполниться при запросе на заданный endpoint
+
+Routers добавляются из папки src - в нашем случае это src/user-router - endpoint '/users' с двумя методами - GET, POST e.t.c
+
+# --------------------------------------------------------------
+
+parseJson - это middleware функция, чтобы не дублировать описанный в ней код в каждый запрос определенного endpoint
+
+# --------------------------------------------------------------
+
+Файл Application.js - основной файл rest API
+
+    // здесь с помощью emit функционала мы добиваемся вызова handler при заданном запросе на определенный endpoint
+
+    addRouter(router){
+        Object.keys(router.endpoints).forEach(path => {
+            const endpoint = router.endpoints[path]
+            Object.keys(endpoint).forEach(method => {
+                this.emitter.on(this._getRouteMask(path, method), (req, res) => {
+                    const handler = endpoint[method]
+                    // по цепочку перед каждым запросом мы вызываем функции middleware
+                    this.middlewares.forEach(middleware => middleware(req, res))
+                    handler(req, res)
+                })
+            })
+        })
+    }
+
+    _createServer(){
+        return http.createServer((req, res) => {
+            // req = readable stream - поэтому, для того чтобы получить тело запроса нам с помощью стрима его необходимо прочитать
+            req.on('data', (chunk) => {
+                console.log(chunk)
+            })
+            // на каждый запрос мы создаем emit, который прописан в методе addRouter
+            const emitted = this.emitter.emit(this._getRouteMask(req.url, req.method), req, res)
+            if (!emitted){
+                res.end()
+            }
+        })
+    }
+
+    _getRouteMask(path, method){
+        return `[${path}]:[${method}]`
+    }
+
