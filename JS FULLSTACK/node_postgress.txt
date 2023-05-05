@@ -1,0 +1,7 @@
+npm init -y
+
+npm i express pg
+
+(Pg - модуль для работы с Postgress)
+
+npm i -D nodemon (for server watching)

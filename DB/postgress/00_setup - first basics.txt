@@ -1,0 +1,36 @@
+https://www.youtube.com/watch?v=fwPR-PCY0h8
+
+https://postgresapp.com/ - устанавливаем программу - опираясь на архитектура процессора и ОС
+
+После этого добавляем psql cli - в $PATH переменную
+
+sudo mkdir -p /etc/paths.d &&
+echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
+
+Теперь postgress можно запускать с компьютера локально: просто включаем сервер POSTGRESS
+
+Далее выбираем DB
+
+Команды 
+psql - подключает пользователя к базе данных
+
+\conninfo - информация о подключении к БД
+\c - a_new_user - чтобы поменять пользователя
+https://stackoverflow.com/questions/39735141/how-to-check-connected-user-on-psql
+
+
+quit - выход
+exit - выход
+
+\list - показываем какие у нас есть DB на локалке
+\l
+
+create database dbname; - создает БД с именем dbname
+
+\c dbname - подключиться к необходимой БД
+
+DROP DATABASE dbname; - удалить БД
+https://phoenixnap.com/kb/postgresql-drop-database#:~:text=The%20first%20method%20to%20remove,execute%20the%20DROP%20DATABASE%20command.
+
+\dt - показывает таблички в базе данных
+\du - показывает количество юзеров и их роли

@@ -1,0 +1,26 @@
+https://vueschool.io/courses/pinia-the-enjoyable-vue-store
+
+(Платный курс - у Коли есть инфо на вход)
+
+npx degit vueschool/pinia-course-boilerplate .
+
+npm i
+
+Npm run dev
+
+https://pinia.vuejs.org/ - official pinia docs
+
+npm install pinia
+
+##########################################
+##########################################
+
+npm init vue@3 - иной вариант как поднять vue3 с pinia 
+
+##########################################
+##########################################
+
+Pinia = что-то вроде mobX для Redux
+В аналогии с Vuex
+Не надо указывать контексты (state, getters, context и т д) + можно обойтись без 
+Синтаксиса Мутаций

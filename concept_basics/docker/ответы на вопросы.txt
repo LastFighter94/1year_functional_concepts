@@ -1,0 +1,11 @@
+https://buildvirtual.net/where-are-docker-images-stored/#:~:text=On%20a%20Mac%2C%20the%20default,docker.
+
+On a Mac, the default location for Docker images is ~/Library/Containers/com.docker.docker/Data/vms/0/. Note than on
+
+########################################################
+
+https://apple.stackexchange.com/questions/391377/what-is-the-purpose-of-docker-raw-file-on-mac-os-catalina
+
+Как снизить размер допустимого хранилища images и containers в докер
+
+########################################################
