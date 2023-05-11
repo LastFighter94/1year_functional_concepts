@@ -1,0 +1,1 @@
+.card{background-image:url(/dist/img/logo.jpg);background-position:50%;background-repeat:no-repeat;border:2px solid #000;height:600px;margin-top:20px;padding:20px;width:1200px}.card h2{color:red}body{background-color:#fafafa}@media (max-width:200px){h1,h2,h3,h4,h5,h6{font-size:40px}}input::-moz-placeholder{color:blue}input::placeholder{color:blue}

@@ -1,0 +1,34 @@
+https://www.youtube.com/watch?v=SP8mSVSAh6s
+
+### https://www.postcss.parts/
+### https://postcss.org/
+
+npm init -y
+npm i -D postcss postcss-cli
+
+npm run build:css
+npm run watch:css
+
+npm i -D autoprefixer
+
+IN ROOT - create postcss.config.js - AND put plugs in there
+
+module.exports = {
+    plugins: [require('autoprefixer')],
+};
+
+
+
+npm i -D postcss-preset-env
+
+npm i -D precss
+
+
+
+#### https://stackoverflow.com/questions/48613236/postcss-syntax-in-webstorm - for web storm	
+
+npm i postcss-import
+
+npm i -D postcss-assets
+
+npm i -D cssnano

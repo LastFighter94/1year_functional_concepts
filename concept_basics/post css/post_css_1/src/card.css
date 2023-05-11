@@ -1,0 +1,15 @@
+.card {
+    padding: 20px;
+    margin-top: 20px;
+    border: $borderWidth solid $borderColor;
+    background-image: resolve('logo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: width('logo.jpg');
+    height: height('logo.jpg');
+
+    h2 {
+        color: red;
+
+    }
+}
