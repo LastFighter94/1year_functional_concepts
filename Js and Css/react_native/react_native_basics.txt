@@ -1,0 +1,82 @@
+https://www.youtube.com/watch?v=mJ3bGvy0WAY
+
+https://rapidapi.com/ - log in with GitHub	
+
+React native - same code for IOS and ANDROID
+
+EXPO - is the same as CRA (create react app or VITE) - tool
+
+INTRO ##################################################
+
+Когда мы ходим на react native мы используем JS также как и на реакте, однако,
+Вместо рендера html элемента мы рендерим native mobile components
+
+Import React from 'react'
+Import {View, Text} from 'react-native'
+
+Const App = () => {
+	return (
+		<View>
+		 <Text>Hello World!</Text>
+		</View>
+	)
+}
+
+Пример компонента на RN
+
+<Text> компонент используется вместо p, h1 e.t.c
+<Text style={{ fontSize: 24, color: 'blue' }}>Hello world</Text>
+
+<View> используется для того чтобы создать контейнер или "вид" для других компонентов
+- словно коробка, которая содержит компоненты - обертка над компонентами
+Похож на DIV in html
+
+View компонент использует flex box layout by default
+
+
+
+Пример как создать свой Button component in React native
+
+Import React from 'react'
+Import {TouchableOpacity, Text} from 'react-native'
+
+Function MyButton(props) {
+	return (
+		<TouchableOpacity onPress={props.onPress}>
+		 <Text>{props.label}</Text>
+		</TouchableOpacity>
+	)
+}
+
+ActivityIndicator - preloader component in your app - fully customisable
+
+Flatlist - is used for rendering a long list of items that need to be scrolled efficiently,
+Like map function in React, BUT is has extra features like Optimised scroll performance, item separation
+!!!
+For larger lists with smooth scrolling use Flatlist
+Other cases - map function is OK
+
+ScrollView - like overflow in Css
+
+SafeAreaView - it provides a safe zone to render your app content without being covered by 
+the device's hardware features like the notch, home indicator, or status bar
+
+###########################################
+
+На 18 ноде !
+
+https://expo.github.io/router/docs/
+
+npx create-expo-app@latest --example with-router ./
+
+npm install expo-font axios react-native-dotenv
+
+npm i 
+
+npm start
+
+### Альтернатива
+
+npm i -g expo-cli
+
+expo-cli start --tunnel

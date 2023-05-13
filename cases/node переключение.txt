@@ -12,6 +12,8 @@ $ brew install nvm
 # Create system directory for nvm.
 $ mkdir ~/.nvm
 
+###### from here after UP deeds
+
 # Add the following to your ~/.bash_profile.
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
