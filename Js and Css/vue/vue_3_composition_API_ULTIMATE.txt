@@ -1,0 +1,16 @@
+https://www.youtube.com/watch?v=I_xLMmNeLDY
+
+https://github.com/harblaith7/Vue3-Crash-Course/blob/main/05-ShowsApp/src/App.vue
+
+npm init vue@latest 
+
+ex_1-1
+ex_1-2
+
+npm init vue@latest 
+
+ex_2
+
+npm init vue@latest
+
+3:09:00 ...

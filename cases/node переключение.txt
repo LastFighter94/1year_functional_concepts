@@ -1,10 +1,26 @@
-brew link node@14
+export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:${PATH}
+export PATH=/opt/homebrew/bin:$PATH
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+В Zshrc файлик - положил (который на уровне - user)
+
+###
 
 echo 'export PATH="/opt/homebrew/opt/node@18/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/opt/homebrew/opt/node@18/bin:$PATH"' >> ~/.bash_profile.
 
-(Также есть - unlink)
+echo 'export PATH="/opt/homebrew/opt/node@14/bin/node"' >> ~/.zshrc
+echo 'export PATH="/opt/homebrew/opt/node@14/bin/node"' >> ~/.bash_profile.
 
+export PATH=/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/opt/node@18/bin:$PATH
 
+Существуют такие пути ноды в brew
+- из "путь 1" я просто переложил node в путь два (затем была какая-то команда после которой все заработало), иначе не получалось
+
+ 1 /opt/homebrew/opt/node@14/bin/node
+ 2 /Users/yurykishko/.nvm/versions/node/v18.16.0/bin/node
 
 # Install NVM with homebrew.
 $ brew install nvm
@@ -19,7 +35,8 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # Read and execute your updated ~/.bash_profile.
-$ source ~/.bash_profile
+$ source ~/.bash_profile (не понимаю зачем нужна эта команда)
+$ source ~/.zshrc (не понимаю зачем нужна эта команда)
 
 # Verify nvm is installed
 $ nvm --version

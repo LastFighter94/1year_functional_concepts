@@ -1,0 +1,27 @@
+<LocationMatch "\.(htm|html)$">
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+Header set Warning "Testing"
+</LocationMatch>
+
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</ifModule>
+
+https://stackoverflow.com/questions/36399319/vue-router-return-404-when-revisit-to-the-url
+
+.htaccess - скорее всего то что сверху положить в этот файл, а этой файл в корень, где index.html
+
+RewriteBase /
+RewriteEngine On
+RewriteRule ^([a-z]+)/$ ?id_page=$1 [L]
+RewriteRule ^([a-z]+)$ ?id_page=$1 [L]
+
+https://qna.habr.com/q/640091
+https://help.reg.ru/support/hosting/fayly-web-config-i-htaccess/nastroyka-szhatiya-i-keshirovaniya-cherez-htaccess

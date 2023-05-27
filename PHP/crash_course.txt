@@ -1,0 +1,24 @@
+https://www.youtube.com/watch?v=BUCiSSyIGGU
+
+PHP - server side rendering! For PHP - to work in local machine - you need ti install PHP in Local Machine
+
+############################################################
+
+При ошибке
+2023-05-24 11:59:56,692 yurys-MacBook-Air.local proftpd[67342]: warning: unable to determine IP address of 'yurys-MacBook-Air.local'
+
+https://www.apachefriends.org/ru/index.html
+
+https://www.youtube.com/watch?v=nIJaPsqGCuk
+cd /private/etc/find.codes
+
+############################################################
+
+В htdoсs уровне - есть папка etc, там есть файл php.ini
+В нем ставим display_errors=On
+Для того чтобы ошибки отображались - (логи) в файле на ошибку
+Не забыть после этого перезапустить Apache
+
+!!!
+
+Точки с запятой в PHP очень нужны! Не забывать их ставить
