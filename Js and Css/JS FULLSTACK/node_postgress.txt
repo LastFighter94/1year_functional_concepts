@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=p3RFMEixUOE&t=3s
+
 npm init -y
 
 npm i express pg

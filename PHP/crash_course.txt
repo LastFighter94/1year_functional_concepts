@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=BUCiSSyIGGU
 
-PHP - server side rendering! For PHP - to work in local machine - you need ti install PHP in Local Machine
+PHP - server side rendering! For PHP - to work in local machine - you need to install PHP in Local Machine
 
 ############################################################
 

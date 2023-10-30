@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=fwPR-PCY0h8
 
-https://postgresapp.com/ - устанавливаем программу - опираясь на архитектура процессора и ОС
+https://postgresapp.com/ - устанавливаем программу - опираясь на архитектурe процессора и ОС
 
 После этого добавляем psql cli - в $PATH переменную
 
