@@ -1,4 +1,4 @@
-Wallaby	extension for viscose or web storm - ! - работа с тестами будет намного продуктивнее (на будущее)
+Wallaby	extension for vscode or web storm - ! - работа с тестами будет намного продуктивнее (на будущее)
 
 Useful docs links
 
