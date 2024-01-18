@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-color: rgb(250, 251, 252);
+  --navbar-height: 80px;
+  --border-main-color: rgb(195, 195, 195);
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+/* navbar && searchbar */
+
+.navbar {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  height: var(--navbar-height);
+  padding: 10px;
+}
+
+.emblem {
+  font-size: 2rem;
+}
+
+.notifications {
+  padding: 5px;
+  border-radius: 100px;
+  border: 3px solid rgb(255, 255, 255); 
+  background-color: #ffffff;
+}
+
+.search-bar {
+  background-color: transparent;
+  border: 1px solid var(--border-main-color);
+  border-radius: 15px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.search-bar input {
+  background-color: transparent;
+  width: 300px;
+  border: 0;
+  outline: none;
+}
+
+/* sidebar && content */
+
+.main {
+  height: calc(100% - var(--navbar-height));
+}
+
+.sidebar, .content {
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+.divider {
+  width: 1.5rem;
+  background-color: var(--main-color);
+}
+
+/* sidebar */
+
+.sidebar {
+  background-color: #ffffff;
+  border-right: 1px solid var(--border-main-color);
+  min-width: 240px;
+}
+
+/* content */
+
+.content {
+  width: 100%;
+}
+
+.content-container {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1.2rem;
+}
+
+.content-container > div {
+  width: 100%;
+  border-radius: 20px;
+  background: white;
+  padding: 20px;
+  margin-left: 1.2rem;
+}
+
+.bottom-items {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* copyright */
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/* accordion */
+
+.accordion-item {
+  border: 0;
+  font-size: 1rem;
+}
+
+.accordion-button {
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.empty-item, .message {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty-item.active span {
+  color: blue;
+}
+
+.msg-counter {
+  color: red;
+}
+
+.accordion-body {
+  padding: 0;
+}
+
+.accordion-body span {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+.accordion-item i {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-icon);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body span {
+  display: block;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--main-color);
+  border-radius: 15px;
+  color: black;
+}
+
+/*  */
+
+.chartBox {
+  padding: 20px;
+}
+
+/*  */
+
+.transactions > div {
+  padding: 5px;
+}
+
+.transactions > div:nth-child(odd) {
+  background-color: var(--main-color);
+}

@@ -1,0 +1,112 @@
+<!-- Composition API version -->
+
+<!-- <script lang="ts">
+import { defineComponent, ref } from 'vue';
+import WeatherCard from '@/components/WeatherCard.vue';
+import SettingsPage from '@/components/SettingsPage.vue';
+import { useStore } from 'vuex'
+
+export default defineComponent({
+  setup(){
+    let citiesStorage = localStorage.getItem('cities')
+
+    let cities = ref<string[]>([])
+    let defaultCityName = ref<string>('')
+    let showSettings = ref<boolean>(false)
+
+    const store = useStore()
+
+    if (navigator.geolocation && !citiesStorage){
+      navigator.geolocation.getCurrentPosition(addDefaultCity, executeOnFailure)
+    }
+
+    if (citiesStorage){
+      cities = JSON.parse(citiesStorage)
+    }
+
+    async function addDefaultCity(position:any):Promise<void>{
+      const lat = position.coords.latitude
+      const lon = position.coords.longitude
+
+      const dataByLatLon = `${store.state.url_base_default_city}reverse?lat=${lat}&lon=${lon}&limit=5&appid=${store.state.api_key}`
+
+      const userCoordsData = await fetch(dataByLatLon)
+
+      if (userCoordsData.ok){
+      defaultCityName.value = await userCoordsData.json().then(function(res) {
+        if (res.name){
+          return res.name
+        } 
+        return res[0].name
+      })
+      .catch((e) => {
+        console.error('app - adding default city - json()', e)
+      })
+
+      const dataByName = `${store.state.url_base}weather?q=${defaultCityName.value}&units=metric&APPID=${store.state.api_key}`
+      const checkUserCoords = await fetch(dataByName)
+
+      if (checkUserCoords.ok){
+        cities.value.push(defaultCityName.value)
+        localStorage.setItem('cities', JSON.stringify(cities.value))
+      } else {
+        console.error('app - user coords - no corresponding data for this coords', lat, lon, defaultCityName.value)
+      } 
+
+      } else {
+        console.error('app - adding default city - fetching stage')
+      }
+    }
+
+    function executeOnFailure(){
+      console.error('app - no navigator support in browser')
+    }
+
+    function changeViewState(){
+      showSettings.value = !showSettings.value
+
+      if (citiesStorage){
+        cities.value = JSON.parse(citiesStorage)
+      }
+    }
+
+    return {
+      addDefaultCity,
+      executeOnFailure,
+      cities,
+      defaultCityName,
+      showSettings,
+      changeViewState
+    }
+  },
+
+  name: 'App',
+  components: {
+    WeatherCard,
+    SettingsPage
+  }
+});
+</script> -->
+
+
+
+Weather card
+
+    setup(props){
+        const data = ref<any>(null)
+        const store = useStore()
+
+        const getResponse = async () => {
+            const res = await fetch(`${store.state.url_base}weather?q=${props.city}&units=metric&APPID=${store.state.api_key}`)
+
+            if (res.ok){
+              data.value = await res.json().catch(e => console.error('weather card - json()'))
+            } else {
+              console.error('weather card - fetching')
+            }
+        }
+
+        getResponse()
+
+        return { data }
+    }

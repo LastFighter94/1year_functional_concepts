@@ -1,0 +1,53 @@
+1) https://openweathermap.org/current
+
+учимся брать данные с API выше
+
+info:
+https://openweathermap.org/current - инструкция официальная
+
+lastfighter94
+yurykishko@yandex.ru
+rebelu94
+
+API KEY 
+77a33b17494fde3d2b6aa90d2e8fdbd3
+
+https://home.openweathermap.org/api_keys - API ключи, которые оформлены на аккаунт
+
+#######################################################################
+
+https://github.com/michaellux/weather-widget-plumsail-test-project#readme - 
+git repo приложения - кто-то пытался это сделать уже (код там жесткий)
+
+https://github.com/michaellux/weather-widget-plumsail-test-project/blob/main/src/store/index.js
+- vuex persistance state
+
+- "vuedraggable": "^2.24.3",
+https://github.com/michaellux/weather-widget-plumsail-test-project/commit/2409d691a522a7c51a8cd2d58d0986d6575c36ed
+
+#######################################################################
+
+минимизированные примеры:
+
+на vue   
+https://www.youtube.com/watch?v=JLc-hWsPTUY
+
+на vanilla js
+https://www.youtube.com/watch?v=nGVoHEZojiQ
+https://gist.github.com/prof3ssorSt3v3/cd1f19bb92da0c48b80aa983484d4a6c
+
+еще примеры
+https://www.youtube.com/watch?v=EQAAn2hgMrM - composition API (+ вместе с TS)
+https://www.youtube.com/watch?v=JLc-hWsPTUY - options API
+https://www.youtube.com/watch?v=5Uxe_MNd6go - options API (bigger version)
+
+#######################################################################
+
+https://dev.to/ttntm/building-an-editable-list-with-drag-and-drop-sorting-in-vue3-1igg - статья
+https://github.com/SortableJS/vue.draggable.next - npm
+"vuedraggable": "^4.1.0" - пакет
+
+https://sortablejs.github.io/vue.draggable.next/#/simple - live demos
+https://github.com/SortableJS/vue.draggable.next/blob/master/example/components/simple.vue - рабочий пример
+
+#######################################################################

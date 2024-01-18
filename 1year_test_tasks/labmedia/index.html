@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Lab Media</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Список пользователей</h1>
+
+        <div class="search-form">
+            <div>
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search" id="search-form">
+            </div>
+
+            <span class="clean-filter">
+                <!-- использовал картинку, потому что font-awesome не всегда срабатывает -->
+                <!-- <i class="fa-solid fa-broom-wide"></i> -->
+                <img src="broom.png" alt="broom">
+                Очистить фильтр
+            </span>
+        </div>
+
+        <div class="sorting">
+            Сортировка:
+            <span class="sort-by-data">Дата регистрации</span>
+            <span class="sort-by-rate">Рейтинг</span>
+        </div>
+
+        <div class="users-table-div">
+            <table class="users-table">
+                <thead>
+                <tr>
+                    <th>Имя пользователя</th>
+                    <td>Email</td>
+                    <td>Дата регистрации</td>
+                    <td>Рейтинг</td>
+                    <td></td>
+                </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div id="pages-div"></div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

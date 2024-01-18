@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-color: rgb(250, 251, 252);
+  --navbar-height: 80px;
+  --border-main-color: rgb(195, 195, 195);
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+.active {
+  color: blue;
+}
+
+/* sidebar && content */
+
+.main {
+  height: calc(100% - var(--navbar-height));
+}
+
+.sidebar, .content {
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+/* content */
+
+.content {
+  width: 100%;
+}
+
+.content-container {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1.2rem;
+}
+
+.content-container > div {
+  width: 100%;
+  border-radius: 20px;
+  background: white;
+  padding: 20px;
+  margin-left: 1.2rem;
+}
+
+.bottom-items {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* copyright */
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/*  */
+
+.chartBox {
+  padding: 20px;
+}
+
+/*  */
+
+.transactions > div {
+  padding: 5px;
+}
+
+.transactions > div:nth-child(odd) {
+  background-color: var(--main-color);
+}

@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=Oswald&family=Poppins:wght@300&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=Montserrat:wght@200&family=Oswald&family=Poppins:wght@300&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(rgb(37, 37, 37), rgb(72, 25, 33), rgb(0, 0, 0));
+    color: #ffffff;
+    font-family: 'Inter';
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    nav, content, footer, .copyright {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav, content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gradient-text {
+    background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* nav */
+
+nav {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.nav-logo {
+    max-width: 140px;
+    font-family: 'Montserrat';
+}
+
+.nav-logo p {
+    color: #E4E5EA;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 19px;
+}
+
+.nav-menu, .nav-contacts {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 40px;
+        background: #1E1E1E;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+    
+    .nav-logo, .nav-contacts {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    nav ul li {
+        margin-left: 0px;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    nav ul li:last-child {
+        display: none;
+    }
+}
+
+/* content */
+
+content {
+    margin-bottom: auto;
+}
+
+.slogan {
+    width: 300px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #E4E5EA;
+}
+
+.slogan p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    width: 260px;
+    font-family: 'Montserrat';
+    margin-top: 20px;
+}
+
+.slogan .gradient-text {
+    display: block;
+}
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.offer .offer-main-text {
+    width: 300px;
+    text-align: right;
+}
+
+.offer .offer-main-text .gradient-text {
+    text-transform: uppercase;
+}
+
+.offer .offer-gifts {
+    width: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: right;
+    margin-top: 30px;
+}
+
+.offer .offer-gifts > div {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-family: 'Montserrat';
+}
+
+.offer .offer-gifts > div h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #E4E5EA;
+}
+
+.offer .offer-gifts > div p {
+    display: block;
+    width: 140px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.offer button {
+    width: 262px;
+    height: 61px;
+    background: #4077F3;
+    border: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #E4E5EA;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    content {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .slogan {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 30px;
+    }
+    
+    .offer {
+        display: block;
+    }
+    
+    .offer .offer-main-text {
+        text-align: left;
+    }
+
+    .offer .offer-main-text .gradient-text {
+        text-transform: lowercase;
+    }
+
+    .offer .offer-gifts > div {
+        align-items: start;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .offer .offer-gifts > div h3::before {
+        content: '-';
+        font-size: 30px;
+        background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .offer .offer-gifts > div p {
+        display: none;
+    }
+    
+    .offer button {
+        display: none;
+    }
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #E4E5EA;
+}
+
+footer > div .footer-header {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #656566;
+    margin-bottom: 20px;
+}
+
+footer .footer-menu > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer .footer-contacts {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: block;
+        background-color: #1E1E1E;
+        margin-bottom: 0;
+    }
+
+    
+    footer > div .footer-header {
+        margin-top: 20px;
+    }
+    
+    footer .footer-contacts {
+        text-align: left;
+    }
+}
+
+/* copyright */
+
+.copyright {
+    text-align: right;
+    margin-bottom: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #E4E5EA;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .copyright {
+        text-align: left;
+        background-color: #1E1E1E;
+        color: #E4E5EA;
+    }
+}
