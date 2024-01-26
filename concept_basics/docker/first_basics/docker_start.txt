@@ -63,7 +63,9 @@ docker image rm imageId
 
 LESSON 5
 
-php % docker build -t my-php-app .
+php
+
+docker build -t my-php-app .
 Flag -t делает название image
 
 docker run -p 8001:80 -d my-php-app
