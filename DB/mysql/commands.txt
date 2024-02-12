@@ -1,0 +1,6 @@
+mysql.server start - запуск mysql server
+mysql -u root - подключаемся к руту
+
+********
+
+SELECT user,host FROM mysql.user;
