@@ -4,3 +4,7 @@ mysql -u root - подключаемся к руту
 ********
 
 SELECT user,host FROM mysql.user;
+
+
+
+type -a mysql - check if mysql is installed and where
