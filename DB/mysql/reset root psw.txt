@@ -1,0 +1,13 @@
+https://www.youtube.com/watch?v=OEXPj8iYP3c
+
+Stop server
+
+sudo /usr/local/mysql/support-files/mysql.server stop
+sudo /usr/local/mysql/support-files/mysql.server start --skip-grant-tables
+/usr/local/mysql/bin/mysql
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'localhost' IDENTIFIED BY '1234';
+exit
+sudo /usr/local/mysql/support-files/mysql.server stop
+sudo /usr/local/mysql/support-files/mysql.server start
+/usr/local/mysql/bin/mysql -u root -p
